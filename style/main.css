@@ -1,11 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
-.link {
-  margin: 500px;
-  color: #7f5539;
-  font-family: font-family, "Mochiy Pop P One", sans-serif;
+body {
+  background: #e6ccb2;
 }
-.link:hover {
+
+.navbar {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  overflow: hidden;
+  background-color: #7f5539;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar .nav-item {
+  display: flex;
+  justify-content: space-between;
+  color: #7f5539;
+  font-family: font-family, "Playfair Display", serif;
+  font-weight: 600;
+  transition: all 500ms;
+  text-align: center;
+}
+
+.nav-link {
   color: #b08968;
+}
+.nav-link:hover {
+  color: #e6ccb2;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e6ccb2;
+}
+
+@media (max-width: 770px) {
+  .nav-link {
+    display: none;
+  }
+  .navbar-brand {
+    left: 15vh;
+  }
 }/*# sourceMappingURL=main.css.map */

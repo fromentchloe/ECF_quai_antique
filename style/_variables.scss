@@ -43,12 +43,9 @@ $text_link : font-family, 'Mochiy Pop P One', sans-serif;
 }
 
 @mixin link-style {
-    margin: 500px;
     color: $brown;
-    font-family : $text_link;
-        &:hover {
-            color: $mid_nude;
-        }
+    font-family : $text_headline;
+    font-weight: 600;
 }
  
  

@@ -1,70 +1,53 @@
 //importation des autres fichiers
-
-@import 'base'; 
 @import 'variables'; 
-@import 'layout'; 
-@import 'components'; 
-@import 'utils'; 
+@import 'base'; 
 
+//header
 
 body {
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .logo {
-    float: left;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .menu {
-    float: right;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  .menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-  }
-  .menu-icon {
-    display: none;
-    font-size: 24px;
-    color: #fff;
-    float: right;
-    margin-top: 15px;
-  }
-  @media only screen and (max-width: 768px) {
-    .menu {
-      display: none;
+    background: $nude;
+}
+.navbar {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    overflow: hidden;
+    background-color: $brown;
+    position: fixed;
+    top: 0;
+    width: 100%;
+        .nav-item {
+            display: flex;
+    justify-content: space-between;
+           @include link-style;
+           transition: all 500ms;
+           text-align: center;
+           
+        }
+    } 
+
+.nav-link {
+    color: $mid-nude;
+    &:hover {
+        color: $nude;
     }
-    .menu-icon {
-      display: block;
+}  
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $nude;
+
+  }
+
+  @media (max-width: 770px) {
+    .nav-link {
+        display: none;
     }
-    .menu-icon:hover {
-      cursor: pointer;
+    .navbar-brand {
+        left: 15vh;
     }
-    .menu-icon.active + ul {
-      display: block;
-    }
-    .menu li {
-      display: block;
-      text-align: center;
-      margin: 0;
-    }
+    
   }

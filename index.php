@@ -7,14 +7,20 @@
     <meta name="keywords" content="restaurant, restaurant savoyard, burger, chef">
     <meta name="author" content="Froment Chloe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/style/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
   <header>
     <?php 
-       require 'views/header.html';
+      require 'views/header.html';
     ?>
   </header>
+  <footer>
+    <?php 
+      require 'views/footer.html'; 
+    ?>
+  </footer>
 
 
 
