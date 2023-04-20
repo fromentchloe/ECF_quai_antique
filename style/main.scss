@@ -5,3 +5,66 @@
 @import 'layout'; 
 @import 'components'; 
 @import 'utils'; 
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+  }
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    float: right;
+    margin-top: 15px;
+  }
+  @media only screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .menu-icon:hover {
+      cursor: pointer;
+    }
+    .menu-icon.active + ul {
+      display: block;
+    }
+    .menu li {
+      display: block;
+      text-align: center;
+      margin: 0;
+    }
+  }
