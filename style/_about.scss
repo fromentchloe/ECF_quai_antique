@@ -1,0 +1,54 @@
+
+  .jarallax-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../style/image/interieur.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+
+    transform: translate3d(0, 0.1px, 0);
+  }
+
+  .text-about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $brown;
+    text-shadow: 10px 10px 10px black;
+    .title {
+        font-family: $text_headline ;
+        font-size: 5rem;
+    }
+  }
+// au dessus de 1076
+
+  @media screen and (min-width: 1076px) {
+    .jarallax-image {
+        top: 110px;
+    }
+    .title {
+        margin-top: 30%;
+        font-size: 5rem;
+    }
+  }
+// de 768 a 1076  
+  @media screen and (min-width: 768px) and (max-width: 1076px) {
+    .jarallax-image {
+        top: 0;
+    }
+  }
+  
+  

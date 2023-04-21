@@ -1,0 +1,70 @@
+/* Définir la couleur de fond du corps de la page et la hauteur */
+body {
+  background-color: $mid_nude;
+  height: 12000px;
+}
+
+/* Définir la couleur de fond de la barre de navigation */
+nav {
+  background-color: $brown;
+}
+
+/* Définir le style du logo */
+.logo {
+  /* Définir le style de la liste des éléments de l'image du logo */
+  .img-logo {
+    list-style: none;
+  }
+}
+
+/* Définir le style de la barre de navigation */
+.navbar-collapse {
+  /* Définir la disposition de la barre de navigation */
+  display: flex;
+  justify-content: space-between;
+
+  /* Définir le style de la liste des liens de navigation */
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+/* Définir le style des liens de navigation */
+.nav-link {
+  font-size: 1.5em;
+  font-family: $text_headline;
+}
+.dropdown-menu {
+   background-color: $nude;
+   text-align: center;
+   .dropdown-item {
+    font-size: 1.5em;
+    font-family: $text_headline;
+    &:active {
+      background: $mid_nude;
+    }
+  }
+}
+
+/* Définir le style des liens de contact */
+.contact-link {
+  /* Utiliser le style de bouton personnalisé */
+  @include btn-style;
+}
+
+/* Définir le style de la barre de navigation pour les écrans de petite taille */
+@media screen and (max-width: 1077px) {
+  /* Définir la disposition de la barre de navigation */
+  .navbar-collapse {
+    display: block;
+    /* Masquer le logo de l'entreprise */
+    .navbar-brand {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+    .contact {
+       margin-left: 25%;
+    }
+}

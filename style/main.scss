@@ -1,39 +1,4 @@
 @import "variables";
-
-body {
-    background-color: $mid_nude;
-    height: 12000px;
-}
-nav {
-  background-color: $brown;
-}
-.logo {
-  .img-logo{
-    list-style: none;
-  }
-}
-.navbar-collapse {
-  display: flex;
-  justify-content: space-between;
-  .navbar-nav {
-    align-items: center;
-  }
-}
-
-.nav-link {
-  font-size: 1.5em;
-  font-family: $text_headline;
-}
-
-.contact-link {
-  @include btn-style;
-}
-
-@media screen and (max-width:1077px) {
-.navbar-collapse {
-  display: block;
-    .navbar-brand {
-      display: none;
-    }
-  }
-}
+@import "bases";
+@import "header";
+@import "about";
