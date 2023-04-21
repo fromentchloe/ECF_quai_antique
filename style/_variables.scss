@@ -1,52 +1,24 @@
-// contient les variables
-//colors 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
 
 $gray : #6c757d;
 $brown : #7f5539;
 $mid_nude : #b08968;
 $nude : #e6ccb2;
 
-//size
-
-$headline_size :20px ; 
-$body_size : 30px ;
- 
-//font
-
 $text_headline : font-family, 'Playfair Display', serif;
 $text_body : font-family, 'Poppins', sans-serif;
-$text_link : font-family, 'Mochiy Pop P One', sans-serif;
+$text_resa : font-family, 'Mochiy Pop P One', sans-serif;
 
-//mixin
-
-@mixin headline_text {
-    color: $brown;
-    font-family: $text_headline;
-    weight : bold;
-}
-
-@mixin body_text {
-    colors: $mid_nude;
-    font-family: $text_body;
-}
 
 @mixin btn-style {
-    border: none;
-    background-color: $brown;
-    color: $nude;
-    padding: 15px;
-    border-radius: 15px;
-    font-family : $text_link;
+    background-color: $nude;
+    font-family : $text_body;
         &:hover {
             background-color: $mid_nude;
+            color: $brown;
         }
 }
-
-@mixin link-style {
-    color: $brown;
-    font-family : $text_headline;
-    font-weight: 600;
-}
- 
- 
 

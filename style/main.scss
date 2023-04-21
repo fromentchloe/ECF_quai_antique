@@ -1,53 +1,39 @@
-//importation des autres fichiers
-@import 'variables'; 
-@import 'base'; 
-
-//header
+@import "variables";
 
 body {
-    background: $nude;
+    background-color: $mid_nude;
+    height: 12000px;
 }
-.navbar {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    height: 30%;
-    overflow: hidden;
-    background-color: $brown;
-    position: fixed;
-    top: 0;
-    width: 100%;
-        .nav-item {
-            display: flex;
-    justify-content: space-between;
-           @include link-style;
-           transition: all 500ms;
-           text-align: center;
-           
-        }
-    } 
+nav {
+  background-color: $brown;
+}
+.logo {
+  .img-logo{
+    list-style: none;
+  }
+}
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  .navbar-nav {
+    align-items: center;
+  }
+}
 
 .nav-link {
-    color: $mid-nude;
-    &:hover {
-        color: $nude;
-    }
-}  
+  font-size: 1.5em;
+  font-family: $text_headline;
+}
 
-.navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: $nude;
+.contact-link {
+  @include btn-style;
+}
 
-  }
-
-  @media (max-width: 770px) {
-    .nav-link {
-        display: none;
-    }
+@media screen and (max-width:1077px) {
+.navbar-collapse {
+  display: block;
     .navbar-brand {
-        left: 15vh;
+      display: none;
     }
-    
   }
+}
