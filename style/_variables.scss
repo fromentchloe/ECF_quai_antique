@@ -22,3 +22,18 @@ $text_resa : font-family, 'Mochiy Pop P One', sans-serif;
         }
 }
 
+@mixin burger-image {
+    width: 10%;
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+  

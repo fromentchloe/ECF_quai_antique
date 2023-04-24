@@ -1,0 +1,22 @@
+.group-dishes {
+    font-family: $text_body;
+    background-color: $nude;
+    color: $brown;
+    margin: 3em;
+}
+.formule {
+    text-align: center;
+    border: 10px solid $brown;
+    .time {
+        list-style: none;
+        text-decoration: underline;
+   }
+    .content {
+        list-style: none;
+        padding: 1em;
+    }
+    h2 {
+        letter-spacing: 0.3em;
+        font-family: $text_headline;
+    }
+}
