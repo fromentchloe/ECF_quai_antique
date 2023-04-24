@@ -20,3 +20,8 @@
         font-family: $text_headline;
     }
 }
+
+.burger-image {
+    @include burger-image;
+    margin-left: 2em;
+}

@@ -167,4 +167,10 @@ nav {
 .formule h2 {
   letter-spacing: 0.3em;
   font-family: font-family, "Playfair Display", serif;
+}
+
+.burger-image {
+  width: 10%;
+  animation: spin 10s linear infinite;
+  margin-left: 2em;
 }/*# sourceMappingURL=main.css.map */
