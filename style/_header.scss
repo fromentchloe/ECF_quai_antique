@@ -4,10 +4,13 @@ body {
 }
 
 /* Définir la couleur de fond de la barre de navigation */
-nav {
+.navbar {
   background-color: $brown;
 }
 
+.transparent-background {
+  background-color: #7f5539b2;;
+}
 /* Définir le style du logo */
 .logo {
   /* Définir le style de la liste des éléments de l'image du logo */
@@ -30,6 +33,7 @@ nav {
 
 /* Définir le style des liens de navigation */
 .nav-link {
+  margin: 0.5em;
   font-size: 1.5em;
   font-family: $text_headline;
 }
@@ -39,9 +43,6 @@ nav {
    .dropdown-item {
     font-size: 1.5em;
     font-family: $text_headline;
-    &:active {
-      background: $mid_nude;
-    }
   }
 }
 
@@ -51,6 +52,9 @@ nav {
   @include btn-style;
 }
 
+.modal {
+  z-index: 1200;
+}
 /* Définir le style de la barre de navigation pour les écrans de petite taille */
 @media screen and (max-width: 1077px) {
   /* Définir la disposition de la barre de navigation */

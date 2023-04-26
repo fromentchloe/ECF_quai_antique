@@ -1,0 +1,16 @@
+footer {
+  font-family: $text_body;
+    background-color: $mid-nude;
+    color: $nude;
+    h4 {
+        font-size: 3em;
+      }
+      .shedule {
+        text-align: center;
+        list-style: none;
+        li {
+            margin-bottom: 1.5em;
+          }
+      }   
+  }
+

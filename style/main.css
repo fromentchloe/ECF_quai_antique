@@ -37,8 +37,12 @@ body {
 }
 
 /* Définir la couleur de fond de la barre de navigation */
-nav {
+.navbar {
   background-color: #7f5539;
+}
+
+.transparent-background {
+  background-color: rgba(127, 85, 57, 0.6980392157);
 }
 
 /* Définir le style du logo */
@@ -62,6 +66,7 @@ nav {
 
 /* Définir le style des liens de navigation */
 .nav-link {
+  margin: 0.5em;
   font-size: 1.5em;
   font-family: font-family, "Playfair Display", serif;
 }
@@ -74,9 +79,6 @@ nav {
   font-size: 1.5em;
   font-family: font-family, "Playfair Display", serif;
 }
-.dropdown-menu .dropdown-item:active {
-  background: #b08968;
-}
 
 /* Définir le style des liens de contact */
 .contact-link {
@@ -87,6 +89,10 @@ nav {
 .contact-link:hover {
   background-color: #b08968;
   color: #7f5539;
+}
+
+.modal {
+  z-index: 1200;
 }
 
 /* Définir le style de la barre de navigation pour les écrans de petite taille */
@@ -173,4 +179,20 @@ nav {
   width: 10%;
   animation: spin 10s linear infinite;
   margin-left: 2em;
+}
+
+footer {
+  font-family: font-family, "Poppins", sans-serif;
+  background-color: #b08968;
+  color: #e6ccb2;
+}
+footer h4 {
+  font-size: 3em;
+}
+footer .shedule {
+  text-align: center;
+  list-style: none;
+}
+footer .shedule li {
+  margin-bottom: 1.5em;
 }/*# sourceMappingURL=main.css.map */

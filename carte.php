@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-<header><?php require 'views/header.html'; ?></header>
+<header><?php require 'views/header.php'; ?></header>
 <main>
   <?php
    include 'views/dishes.html'; 
    ?>
 </main>
+<footer>
+  <?php include "views/footer.html"; ?>
+</footer>
 </body>
