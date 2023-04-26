@@ -7,12 +7,11 @@ $(document).ready(function() {
   });
   // Fenetre de connections 
   $("#login-button").click(function() {
-    $("#login-modal").show(400);
+    $("#login-modal").show();
   });
   $("#login-modal .close").click(function() {
-    $("#login-modal").hide(400);
+    $("#login-modal").hide();
   });
-  
   
   //transparence de la navbar au scroll
   $(window).scroll(function () {
