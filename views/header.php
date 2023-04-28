@@ -43,9 +43,11 @@
       <button class="btn" id="login-button">Se connecter</button>
     </a>
     <!-- Boutons de reservation -->
-    <a class="contact-link p-2 m-2 rounded">
+    <a class="contact-link p-2 m-2 rounded" id="reservation-button">
       <button class="btn">Réserver</button>
     </a>
+    <?php include "reservation.php" ?>
+ 
   </div>
   </div>
 </nav>
