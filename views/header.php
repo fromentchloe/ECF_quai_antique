@@ -38,12 +38,10 @@
   </div>
 
   <!-- Boutons & formulaire de connexion  -->
-  <div class="contact d-flex justify-content-center">
+  <div class="contact">
     <a class="contact-link p-2 m-2 rounded">
       <button class="btn" id="login-button">Se connecter</button>
     </a>
-      </div>
-    </div>
     <!-- Boutons de reservation -->
     <a class="contact-link p-2 m-2 rounded">
       <button class="btn">Réserver</button>
