@@ -41,7 +41,7 @@
           <input type="number" id="numPeople" name="numPeople" min="1" max="50" required><br><br>
           <label for="maxCapacity">Capacité a la date choisie: </label>
           <span id="maxCapacity"></span><br><br>
-          <button class="submit" type="submit" value="Réserver" form="reservation-form">Réserver</button>
+          <input class="submit" type="submit" value="Réserver"></input>
           <button class="cancel" id="cancel" type="button">Annuler</button>
         </form>
       </div>

@@ -42,7 +42,19 @@ $(document).ready(function() {
   }
 });
 
-
+function checkDate() {
+  const selectedDate = new Date($('#selectedDate').val());
+  const dayOfWeek = selectedDate.getDay();
+  const message = $('#message');
+  
+  if (dayOfWeek === 1 || dayOfWeek === 2) {
+    message.html("Nous sommes fermés le lundi et mardi.");
+    message.css('display', 'flex');
+    message.css('color', 'red');
+  } else {
+    message.css('display', 'none');
+  }
+}
 
 
 
