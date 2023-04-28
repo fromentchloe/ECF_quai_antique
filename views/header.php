@@ -5,12 +5,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-  <!-- Menu déroulant -->
+<!-- Menu déroulant -->
   <div class="navbar-collapse collapse" id="navbarNav">
     <a class="navbar-brand navbar-brand-title" href="index.php">
-      <!-- Logo -->
-      <img src="./style/image/text+logo.png" width="150" alt="Logo de l'entreprise">
-    </a>
+<!-- Logo -->
+  <img class="logo" src="./style/image/text+logo.png" width="100" alt="Logo de l'entreprise"></a>
+
 
     <!-- Liste des liens de navigation -->
     <ul class="navbar-nav">
@@ -42,20 +42,8 @@
     <a class="contact-link p-2 m-2 rounded">
       <button class="btn" id="login-button">Se connecter</button>
     </a>
-    <div id="login-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <form id="login-form">
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="email" required>
-          <label for="password">Mot de passe :</label>
-          <input type="password" id="password" name="password" required>
-          <input type="submit" value="Se connecter">
-        </form>
-        <p id="login-message"></p>
       </div>
     </div>
-
     <!-- Boutons de reservation -->
     <a class="contact-link p-2 m-2 rounded">
       <button class="btn">Réserver</button>

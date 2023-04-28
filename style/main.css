@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+body {
+  box-sizing: border-box;
+  background-color: #b08968;
+}
+
 @keyframes spin {
   from {
     opacity: 1;
@@ -12,45 +17,45 @@
     transform: rotate(360deg);
   }
 }
-body {
-  box-sizing: border-box;
+.group-dishes {
+  font-family: font-family, "Poppins", sans-serif;
+  background-color: #b08968;
+  color: #7f5539;
+}
+
+.formule {
+  background-color: #e6ccb2;
+  text-align: center;
+  border: 10px solid #7f5539;
+}
+.formule .time {
+  list-style: none;
+  text-decoration: underline;
+}
+.formule .content {
+  list-style: none;
+  padding: 1em;
+}
+.formule h2 {
+  letter-spacing: 0.3em;
+  font-family: font-family, "Playfair Display", serif;
 }
 
 .burger-image {
   width: 10%;
   animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-}
-/* Définir la couleur de fond du corps de la page et la hauteur */
-body {
-  background-color: #b08968;
+  margin-left: 2em;
 }
 
 /* Définir la couleur de fond de la barre de navigation */
 .navbar {
   background-color: #7f5539;
-}
-
-.transparent-background {
-  background-color: rgba(127, 85, 57, 0.6980392157);
+  font-family: font-family, "Playfair Display", serif;
 }
 
 /* Définir le style du logo */
 .logo {
-  /* Définir le style de la liste des éléments de l'image du logo */
-}
-.logo .img-logo {
-  list-style: none;
+  box-shadow: 10px 20px 50px black;
 }
 
 /* Définir le style de la barre de navigation */
@@ -58,31 +63,25 @@ body {
   /* Définir la disposition de la barre de navigation */
   display: flex;
   justify-content: space-between;
-  /* Définir le style de la liste des liens de navigation */
-}
-.navbar-collapse .navbar-nav {
-  align-items: center;
 }
 
 /* Définir le style des liens de navigation */
 .nav-link {
+  color: #e6ccb2;
   margin: 0.5em;
-  font-size: 1.5em;
-  font-family: font-family, "Playfair Display", serif;
+  font-size: 1.2em;
 }
 
 .dropdown-menu {
   background-color: #e6ccb2;
   text-align: center;
 }
-.dropdown-menu .dropdown-item {
-  font-size: 1.5em;
-  font-family: font-family, "Playfair Display", serif;
+.dropdown-menu .dropdown-item:hover {
+  background-color: #b08968;
 }
 
 /* Définir le style des liens de contact */
 .contact-link {
-  /* Utiliser le style de bouton personnalisé */
   background-color: #e6ccb2;
   font-family: font-family, "Poppins", sans-serif;
 }
@@ -91,26 +90,7 @@ body {
   color: #7f5539;
 }
 
-.modal {
-  z-index: 1200;
-}
-
 /* Définir le style de la barre de navigation pour les écrans de petite taille */
-@media screen and (max-width: 1077px) {
-  /* Définir la disposition de la barre de navigation */
-  .navbar-collapse {
-    display: block;
-    /* Masquer le logo de l'entreprise */
-  }
-  .navbar-collapse .navbar-brand {
-    display: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .contact {
-    margin-left: 25%;
-  }
-}
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -138,49 +118,6 @@ body {
   font-size: larger;
 }
 
-@media screen and (min-width: 1076px) {
-  .jarallax-image {
-    top: 110px;
-  }
-  .title {
-    font-size: 5rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1076px) {
-  .jarallax-image {
-    top: 0;
-  }
-}
-.group-dishes {
-  font-family: font-family, "Poppins", sans-serif;
-  background-color: #e6ccb2;
-  color: #7f5539;
-  margin: 3em;
-}
-
-.formule {
-  text-align: center;
-  border: 10px solid #7f5539;
-}
-.formule .time {
-  list-style: none;
-  text-decoration: underline;
-}
-.formule .content {
-  list-style: none;
-  padding: 1em;
-}
-.formule h2 {
-  letter-spacing: 0.3em;
-  font-family: font-family, "Playfair Display", serif;
-}
-
-.burger-image {
-  width: 10%;
-  animation: spin 10s linear infinite;
-  margin-left: 2em;
-}
-
 footer {
   font-family: font-family, "Poppins", sans-serif;
   background-color: #b08968;
@@ -195,4 +132,30 @@ footer .shedule {
 }
 footer .shedule li {
   margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 1076px) {
+  .jarallax-image {
+    top: 110px;
+  }
+  .title {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1076px) {
+  .jarallax-image {
+    top: 0;
+  }
+  .navbar-collapse {
+    display: block;
+    /* Masquer le logo de l'entreprise */
+  }
+  .navbar-collapse .navbar-brand {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1076px) and (max-width: 768px) {
+  .contact {
+    margin-left: 25%;
+  }
 }/*# sourceMappingURL=main.css.map */
