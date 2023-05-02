@@ -18,6 +18,7 @@
     </header>
     <main>
       <article>
+        <?php require 'views/gallery.html'; ?>
       </article>
     </main>
     <footer>

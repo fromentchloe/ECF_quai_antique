@@ -167,19 +167,20 @@ input[type=text], input[type=date], input[type=number], select {
   font-size: larger;
 }
 
-footer {
+.footer {
   font-family: font-family, "Poppins", sans-serif;
   background-color: #b08968;
   color: #e6ccb2;
+  list-style: none;
 }
-footer h4 {
-  font-size: 3em;
+.footer h4 {
+  font-size: 30em;
 }
-footer .shedule {
+.footer .shedule {
   text-align: center;
   list-style: none;
 }
-footer .shedule li {
+.footer .shedule li {
   margin-bottom: 1.5em;
 }
 
@@ -207,7 +208,4 @@ footer .shedule li {
   .contact {
     margin-left: 25%;
   }
-}
-.resa {
-  background-color: red;
 }/*# sourceMappingURL=main.css.map */

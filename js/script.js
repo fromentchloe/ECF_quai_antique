@@ -56,7 +56,14 @@ function checkDate() {
   }
 }
 
-
+// gallery image 
+const galleryItems = document.querySelectorAll('.gallery-item');
+galleryItems.forEach(item => {
+  const img = item.querySelector('img');
+  img.addEventListener('load', () => {
+    item.classList.add('loaded');
+  });
+});
 
 
 
