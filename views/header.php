@@ -18,7 +18,7 @@
         <a class="nav-link" href="#about">À propos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#galerie">Galerie</a>
+        <a class="nav-link" href="./index.php#gallery">Galerie</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="carte.php" role="button" data-bs-toggle="dropdown">

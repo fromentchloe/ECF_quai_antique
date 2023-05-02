@@ -17,7 +17,7 @@
       <?php include 'views/about.html'; ?>
     </header>
     <main>
-      <article>
+      <article id="gallery">
         <?php require 'views/gallery.html'; ?>
       </article>
     </main>
