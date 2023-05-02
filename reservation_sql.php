@@ -27,8 +27,9 @@
     $row = $result->fetch_assoc();
     $total_count = $row['total_count'];
 
-    if ($total_count + $numPeople > 50) {
-        echo '<h2>Désolé, nous sommes complets pour cette date.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour à la page d\'accueil</a></div>';
+    if ($total_count + $numPeople > 7) {
+        echo '<h2>Désolé, nous sommes complets pour cette heure là .</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour à la page d\'accueil</a></div>';
+        echo '<br><br><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Changer d\'heure</a></div>';
         exit;
     }
     // Insérer la réservation dans la base de données
