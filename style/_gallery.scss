@@ -1,0 +1,35 @@
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  img {
+    max-width: 100%; 
+    max-height: 100%;
+    transition: transform 0.5s ease;
+      &:hover {
+          transform: scale(1.1);
+        }
+}
+}
+.caption {
+  font-family: $text_body;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  background-color: #7f553973;
+  padding: 0.3rem;
+  color: #e6ccb2;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+  transform: scale(1.1);
+}
