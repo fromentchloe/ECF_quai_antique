@@ -7,8 +7,8 @@
       </div>
       <div class="modal-body">
         <form method="POST" action="reservation_sql.php">
-          <label for="name" required>Nom :</label>
-          <input type="text" id="name" name="name"><br><br>
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required><br><br>
           <label for="date">Date :</label>
           <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required><br><br>
           <p id="message" style="display:none"></p>

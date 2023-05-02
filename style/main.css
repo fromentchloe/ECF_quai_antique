@@ -53,6 +53,10 @@ input[type=text], input[type=date], input[type=number], select {
   background-color: #7f5539;
 }
 
+.resa {
+  background-color: red;
+}
+
 @media screen and (max-width: 800px) {
   form {
     margin: 0%;
@@ -203,4 +207,7 @@ footer .shedule li {
   .contact {
     margin-left: 25%;
   }
+}
+.resa {
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */

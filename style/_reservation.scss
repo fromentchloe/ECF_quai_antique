@@ -31,6 +31,10 @@ input[type="text"], input[type="date"], input[type="number"], select {
     background-color: $brown;
   }
 }
+
+.resa {
+  background-color: red;
+}
  @media screen and (max-width: 800px) {
         form {
           margin: 0%;
