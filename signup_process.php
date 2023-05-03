@@ -6,7 +6,7 @@
   </head>
   <body style="background-color: #e6ccb2; color: #7f5539; text-align: center"> 
     <a href="./index.php"><img src="./style/image/Logo.png"></a>
-<?php
+    <?php
 // Connexion à la base de données
 require_once './MySQL/connection_bdd.php';
 
@@ -14,7 +14,7 @@ require_once './MySQL/connection_bdd.php';
 // Récupérer les informations du formulaire d'inscription
 $name = mysqli_real_escape_string($conn, $_POST['name']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
-$password = mysqli_real_escape_string($conn, $_POST['password_hash']);
+$password = mysqli_real_escape_string($conn, $_POST['password']);
 $password_hash = password_hash($password, PASSWORD_DEFAULT); // Hasher le mot de passe
 $allergies = mysqli_real_escape_string($conn, $_POST['allergies']);
 
@@ -23,10 +23,10 @@ $sql = "SELECT COUNT(*) FROM users WHERE email = '$email'";
 $result = mysqli_query($conn, $sql);
 $count = mysqli_fetch_array($result)[0];
 if ($count > 0) {
-    echo '<h2>Un compte existe déja a l\'adresse ' . $email . ' </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour à l\'accueil</a></div>';
+    echo '<h2>Un compte existe déja a l\'adresse ' . $email . ' </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Mot de passe oublier</a></div>';
 } else {
     // Requête SQL pour insérer un nouvel utilisateur dans la base de données
-    $sql = "INSERT INTO users (name, email, password_hash, allergies) VALUES ('$name', '$email', '$password_hash', '$allergies')";
+    $sql = "INSERT INTO users (name, email, password, allergies) VALUES ('$name', '$email', '$password_hash', '$allergies')";
     if (mysqli_query($conn, $sql)) {
         // L'inscription a réussi, stocker le nom de l'utilisateur dans la session
         session_start();
