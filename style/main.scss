@@ -103,7 +103,7 @@ body {
     transform: translate(-50%, -40%);
     text-align: center;
     color: $nude;
-    background-image: linear-gradient(to bottom right, rgba(127, 85, 57, 1), rgba(127, 85, 57, 0.6));
+    background-image: linear-gradient(to bottom right, rgba(127, 85, 57, 1), rgba(127, 85, 57, 0.466));
     .title {
         font-family: $text_headline ;
         font-size: 5rem;
@@ -117,22 +117,20 @@ body {
 
 
   // footer 
-  .footer {
+
+  footer {
     font-family: $text_body;
-      background-color: $mid-nude;
+    color: $nude;
+    a {
+      text-decoration: none;
       color: $nude;
-      list-style: none;
-      h4 {
-          font-size: 30em;
-        }
-        .shedule {
-          text-align: center;
-          list-style: none;
-          li {        
-            margin-bottom: 1.5em;
-            }
-        }   
+      &:hover {
+        color: $brown;
+      }
     }
+  }
+
+
 
 //Responsive design
 //au dessus de 1076px  
@@ -159,6 +157,9 @@ body {
   @media (max-width: 768px) {
     .contact {
       margin-left: 25%;
+    }
+    footer ul li i {
+      margin-right: 10px;
     }
   }}
 

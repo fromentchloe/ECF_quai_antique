@@ -193,7 +193,7 @@ input[type=text], input[type=date], input[type=number], select {
   transform: translate(-50%, -40%);
   text-align: center;
   color: #e6ccb2;
-  background-image: linear-gradient(to bottom right, rgb(127, 85, 57), rgba(127, 85, 57, 0.6));
+  background-image: linear-gradient(to bottom right, rgb(127, 85, 57), rgba(127, 85, 57, 0.466));
 }
 .text-about .title {
   font-family: font-family, "Playfair Display", serif;
@@ -204,21 +204,16 @@ input[type=text], input[type=date], input[type=number], select {
   font-size: larger;
 }
 
-.footer {
+footer {
   font-family: font-family, "Poppins", sans-serif;
-  background-color: #b08968;
   color: #e6ccb2;
-  list-style: none;
 }
-.footer h4 {
-  font-size: 30em;
+footer a {
+  text-decoration: none;
+  color: #e6ccb2;
 }
-.footer .shedule {
-  text-align: center;
-  list-style: none;
-}
-.footer .shedule li {
-  margin-bottom: 1.5em;
+footer a:hover {
+  color: #7f5539;
 }
 
 @media screen and (min-width: 1076px) {
@@ -244,5 +239,8 @@ input[type=text], input[type=date], input[type=number], select {
 @media screen and (min-width: 768px) and (max-width: 1076px) and (max-width: 768px) {
   .contact {
     margin-left: 25%;
+  }
+  footer ul li i {
+    margin-right: 10px;
   }
 }/*# sourceMappingURL=main.css.map */
