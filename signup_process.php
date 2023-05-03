@@ -23,7 +23,7 @@ $sql = "SELECT COUNT(*) FROM users WHERE email = '$email'";
 $result = mysqli_query($conn, $sql);
 $count = mysqli_fetch_array($result)[0];
 if ($count > 0) {
-    echo '<h2>Un compte existe déja a l\'adresse ' . $email . ' </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page précédente</a></div>';
+    echo '<h2>Un compte existe déja a l\'adresse ' . $email . ' </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour à l\'accueil</a></div>';
 } else {
     // Requête SQL pour insérer un nouvel utilisateur dans la base de données
     $sql = "INSERT INTO users (name, email, password_hash, allergies) VALUES ('$name', '$email', '$password_hash', '$allergies')";
@@ -33,7 +33,7 @@ if ($count > 0) {
         $_SESSION['user_name'] = $name;
         $_SESSION['user_email'] = $email;
         $_SESSION['user_is_admin'] = false;
-        header('Location: index.php');
+        echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="index.php">Retour à l\'accueil</a></div>';    
     } else {
         // L'inscription a échoué, afficher un message d'erreur
         echo "Erreur : " . mysqli_error($conn);
