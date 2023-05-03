@@ -130,6 +130,16 @@ body {
       }
     }
   }
+
+  input[type="text"], input[type="date"], input[type="number"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $brown;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #7f5539;
+  }
 //Responsive design
 //au dessus de 1076px  
 @media screen and (min-width: 1076px) {
