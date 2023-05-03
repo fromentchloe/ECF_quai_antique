@@ -53,10 +53,6 @@ input[type=text], input[type=date], input[type=number], select {
   background-color: #7f5539;
 }
 
-.resa {
-  background-color: red;
-}
-
 @media screen and (max-width: 800px) {
   form {
     margin: 0%;
@@ -67,6 +63,7 @@ input[type=text], input[type=date], input[type=number], select {
   }
 }
 .group-dishes {
+  margin-top: 5%;
   font-family: font-family, "Poppins", sans-serif;
   background-color: #b08968;
   color: #7f5539;
@@ -205,6 +202,7 @@ input[type=text], input[type=date], input[type=number], select {
 }
 
 footer {
+  padding-top: 5%;
   font-family: font-family, "Poppins", sans-serif;
   color: #e6ccb2;
 }

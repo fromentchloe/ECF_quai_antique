@@ -37,16 +37,17 @@
     </ul>
   </div>
 
-  <!-- Boutons & formulaire de connexion  -->
+<!-- Boutons & formulaire de connexion  -->
   <div class="contact">
-    <a class="contact-link p-2 m-2 rounded">
-      <button class="btn" id="login-button">Se connecter</button>
+    <a class="contact-link p-2 m-2 rounded" id="login-button">
+      <button type="button" class="btn" id="open-login-modal" >Se connecter</button>
     </a>
-    <!-- Boutons de reservation -->
+<!-- Boutons de reservation -->
     <a class="contact-link p-2 m-2 rounded" id="reservation-button">
-      <button class="btn">Réserver</button>
+      <button type="button" class="btn" id="open-reservation-modal" >Réserver</button>
     </a>
-    <?php include "reservation.php" ?>
+    <?php include "reservation.php"; include "login.php" ?>
+   
  
   </div>
   </div>

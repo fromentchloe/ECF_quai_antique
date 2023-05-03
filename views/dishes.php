@@ -1,7 +1,7 @@
-<div class="wrapper">
-    <div class="text-about col-md-6">
-        <h1 class="title">Bienvenue au Quai Avare !</h1>
-        <p class="subtitle" >Découvrez la carte du troisière restaurant du chef Michant Arnaud  </p>
+<div class="wrapper ">
+    <div class="text-about col-md-8 rounded">
+        <h1 class="title">MENU</h1>
+        <p class="subtitle" >Découvrez la carte du chef Michant Arnaud</p>
     </div>
 </div>
 <!--les formules-->

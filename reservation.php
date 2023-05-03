@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="reservation-modal-label">Réservation</h3>
+        <h2 class="modal-title" id="reservation-modal-label">Réservation</h2>
         <button type="button" class="btn-close" id="close"></button>
       </div>
       <div class="modal-body">

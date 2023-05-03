@@ -119,6 +119,7 @@ body {
   // footer 
 
   footer {
+    padding-top: 5%;
     font-family: $text_body;
     color: $nude;
     a {
@@ -129,9 +130,6 @@ body {
       }
     }
   }
-
-
-
 //Responsive design
 //au dessus de 1076px  
 @media screen and (min-width: 1076px) {
@@ -161,5 +159,7 @@ body {
     footer ul li i {
       margin-right: 10px;
     }
-  }}
+  }
+}
+
 
