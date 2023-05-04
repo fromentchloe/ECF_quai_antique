@@ -1,0 +1,6 @@
+.about_title {
+    @include title;
+}
+p {
+    @include text_body;
+}

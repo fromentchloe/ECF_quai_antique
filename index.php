@@ -16,15 +16,15 @@
   <body>
       <header>
         <?php require 'views/navbar.php'; ?>
-        <?php include 'views/header.php'; ?><hr>
+        <?php include 'views/header.php'; ?>
       </header>
       <main>
         <article>
         <section>
-            <?php require 'views/about.php'; ?><hr>
+            <?php require 'views/about.php'; ?>
           </section>
           <section>
-            <?php require 'views/schedule.php'; ?><hr>
+            <?php require 'views/schedule.php'; ?>
           </section>
           <section>
             <?php require 'views/gallery.php'; ?>

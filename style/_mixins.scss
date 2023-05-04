@@ -29,4 +29,8 @@
       font-size: 3em;
       text-align: center;
   }
+  @mixin text_body {
+    font-family: $text_body;
+    color: $nude;
+  }
   

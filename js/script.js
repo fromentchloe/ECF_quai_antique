@@ -9,7 +9,7 @@ $(document).ready(function() {
   //transparence de la navbar au scroll
   $(document).scroll(function () {
     if($(window).scrollTop() > 20) {
-      $('.navbar').css("background", "#7f553971");
+      $('.navbar').css("background", "#7f5539cc");
     } else {
       $(".navbar").css("background", "#7f5539");
     }
@@ -82,5 +82,36 @@ $(document).ready(function() {
   });
 });
 
+//apparition gauche a droite 
+const leftToRightElements = document.querySelectorAll('.left-to-right');
+const rightToLeftElements = document.querySelectorAll('.right-to-left');
+
+function isVisible(element) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  const threshold = windowHeight - 70;
+
+  return rect.top <= threshold;
+}
+
+function handleScroll() {
+  leftToRightElements.forEach((element) => {
+    if (isVisible(element)) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+  });
+
+  rightToLeftElements.forEach((element) => {
+    if (isVisible(element)) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
 
 

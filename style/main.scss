@@ -7,10 +7,11 @@
 @import "mixins";
 @import "navbar";
 @import "welcome";
-@import "schedule";
 @import "reservation";
-@import "dishes";
+@import "about";
+@import "schedule";
 @import "gallery";
+@import "dishes";
 @import "footer";
 @import "responsive";
 
@@ -18,4 +19,27 @@ body {
     box-sizing: border-box;
     background-color: $brown;
 }
+hr {
+    color: $nude;
+}
 
+.left-to-right,
+.right-to-left {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.left-to-right.visible,
+.right-to-left.visible {
+  opacity: 1;
+  transform: translate(-200);
+}
+.left-to-right.visible {
+  transform: translateX(-10px);
+}
+
+.right-to-left.visible {
+  transform: translateX(10px);
+}
+
+  
