@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-      <?php require 'views/header.php'; ?>
+      <?php require 'views/navbar.php'; ?>
     </header>
     <main>
       <?php
@@ -22,7 +22,7 @@
       ?>
     </main>
     <footer>
-      <?php include "views/footer.html"; ?>
+      <?php include "views/footer.php"; ?>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

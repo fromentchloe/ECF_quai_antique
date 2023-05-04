@@ -8,8 +8,8 @@ $(document).ready(function() {
 
   //transparence de la navbar au scroll
   $(document).scroll(function () {
-    if($(window).scrollTop() > 300) {
-      $('.navbar').css("background", "#7f553973");
+    if($(window).scrollTop() > 20) {
+      $('.navbar').css("background", "#7f553971");
     } else {
       $(".navbar").css("background", "#7f5539");
     }

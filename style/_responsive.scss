@@ -23,6 +23,9 @@
       .title {
         font-size: 4em;
       }
+      .cart {
+        width: 100%;
+      }
   }
     // en dessous de 768
     @media (max-width: 768px) {
@@ -42,5 +45,9 @@
         margin: 0%;
         width: 100%;
       }
-  }
+   
+      .cart {
+        width: 100%;
+      }
+  };
   

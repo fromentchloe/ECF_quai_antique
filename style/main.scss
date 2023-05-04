@@ -7,14 +7,15 @@
 @import "mixins";
 @import "navbar";
 @import "welcome";
-@import "responsive";
+@import "shedule";
 @import "reservation";
 @import "dishes";
 @import "gallery";
 @import "footer";
+@import "responsive";
 
 body {
     box-sizing: border-box;
-    background-color: $mid_nude; 
+    background-color: $brown;
 }
 

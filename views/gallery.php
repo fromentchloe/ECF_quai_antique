@@ -1,7 +1,7 @@
 
 <div class="container-fluid" id="gallery">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-md-2">
             <div class="gallery-item rounded">
                 <img src="./image/Salade savoyarde.png" alt="Salade savoyarde">
                 <div class="caption">Salade savoyarde</div>

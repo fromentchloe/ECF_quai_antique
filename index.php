@@ -14,17 +14,24 @@
   </head>
   <body>
       <header>
-        <?php require 'views/header.php'; ?>
-        <?php include 'views/about.php'; ?>
+        <?php require 'views/navbar.php'; ?>
+        <?php include 'views/header.php'; ?>
       </header>
       <main>
         <article>
-          <?php require 'views/shedule.html'; ?>
-          <?php require 'views/gallery.html'; ?>
+        <section>
+            <?php require 'views/about.php'; ?>
+          </section>
+          <section>
+            <?php require 'views/shedule.php'; ?>
+          </section>
+          <section>
+            <?php require 'views/gallery.php'; ?>
+          </section>
         </article>
       </main>
       <footer>
-        <?php include "views/footer.html"; ?>
+        <?php include "views/footer.php"; ?>
       </footer>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
