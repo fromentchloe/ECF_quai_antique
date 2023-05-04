@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" id="close"></button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="reservation_sql.php">
+        <form method="POST" action="./MySQL/reservation_process.php">
           <label for="name">Nom :</label>
           <input type="text" id="name" name="name" required><br><br>
           <label for="date">Date :</label>

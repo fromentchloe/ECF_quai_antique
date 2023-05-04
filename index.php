@@ -15,7 +15,7 @@
   <body>
       <header>
         <?php require 'views/header.php'; ?>
-        <?php include 'views/about.html'; ?>
+        <?php include 'views/about.php'; ?>
       </header>
       <main>
         <article>

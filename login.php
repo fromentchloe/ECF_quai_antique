@@ -12,7 +12,7 @@
           
           <label for="password">Mot de passe :</label>
           <input type="password" id="password" name="password" required><br><br>
-          <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+        
           
           <input class="submit" type="submit" value="Se connecter"></input>
         </form>
@@ -29,8 +29,7 @@
           
           <label for="allergies">Allergies (optionnel) :</label>
           <textarea id="allergies" name="allergies"></textarea>
-          
-          <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+        
           <input class="submit" type="submit" value="S'inscrire">
           <input class="cancel" type="reset" value="Annuler">
         </form>

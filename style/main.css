@@ -194,7 +194,6 @@ input[type=text], input[type=date], input[type=number], input[type=email], input
 }
 .text-about .title {
   font-family: font-family, "Playfair Display", serif;
-  font-size: 5rem;
 }
 .text-about .subtitle {
   font-family: font-family, "Playfair Display", serif;
@@ -214,22 +213,12 @@ footer a:hover {
   color: #7f5539;
 }
 
-input[type=text], input[type=date], input[type=number], input[type=email], textarea, select {
-  width: 100%;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #7f5539;
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #7f5539;
-}
-
 @media screen and (min-width: 1076px) {
   .jarallax-image {
     top: 110px;
   }
   .title {
-    font-size: 5rem;
+    font-size: 5em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1076px) {
@@ -243,12 +232,21 @@ input[type=text], input[type=date], input[type=number], input[type=email], texta
   .navbar-collapse .navbar-brand {
     display: none;
   }
+  .title {
+    font-size: 4em;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 1076px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .contact {
     margin-left: 25%;
   }
   footer ul li i {
     margin-right: 10px;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .text-about {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Le Quai Antique</title>
-    <meta charset="UTF-8">
-  </head>
-  <body style="background-color: #e6ccb2; color: #7f5539; text-align: center"> 
+
+<body style=" text-align: center; background-color: #e6ccb2; color: #7f5539; text-align: center"> 
     <a href="./index.php"><img src="./style/image/Logo.png"></a>
     <?php
 // Connexion à la base de données
@@ -40,6 +35,4 @@ if ($count > 0) {
     }
 }
 
-// Fermer la connexion à la base de données
-mysqli_close($conn);
-?>
+?></body>

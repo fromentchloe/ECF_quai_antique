@@ -69,7 +69,7 @@ body {
   .nav-link {
     color: $nude;
     margin: 0.5em;
-    font-size: 1.2em;    
+    font-size: 1.2em;   
   }
   .dropdown-menu {
      background-color: $nude;
@@ -106,8 +106,7 @@ body {
     background-image: linear-gradient(to bottom right, rgba(127, 85, 57, 1), rgba(127, 85, 57, 0.466));
     .title {
         font-family: $text_headline ;
-        font-size: 5rem;
-
+        
   }
     .subtitle {
       font-family: $text_headline ;
@@ -131,15 +130,6 @@ body {
     }
   }
 
-  input[type="text"], input[type="date"], input[type="number"], input[type="email"], textarea, select {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid $brown;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #7f5539;
-  }
 //Responsive design
 //au dessus de 1076px  
 @media screen and (min-width: 1076px) {
@@ -147,7 +137,7 @@ body {
       top: 110px;
   }
   .title {
-    font-size: 5rem;
+    font-size: 5em;
   }
 }
 // de 768 a 1076  
@@ -159,8 +149,13 @@ body {
       display: block;
       /* Masquer le logo de l'entreprise */
       .navbar-brand {
-        display: none;}
-  }
+        display: none;
+      }
+    }
+    .title {
+      font-size: 4em;
+    }
+}
   // en dessous de 768
   @media (max-width: 768px) {
     .contact {
@@ -169,7 +164,10 @@ body {
     footer ul li i {
       margin-right: 10px;
     }
-  }
-}
+    .title {
+      font-size: 3em;
+    }
+    .text-about {
+      width: 100%;
 
-
+  }}
