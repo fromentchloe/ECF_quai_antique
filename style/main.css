@@ -81,17 +81,16 @@
   font-size: larger;
 }
 
-.shedule_group {
+.schedule_group {
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #e6ccb2;
-  background-color: #7f5539;
 }
-.shedule_group .schedule_title {
+.schedule_group .schedule_title {
   font-family: "Playfair Display", serif;
   font-size: 3em;
 }
-.shedule_group .shedule_list {
+.schedule_group .schedule_list {
   list-style: none;
 }
 

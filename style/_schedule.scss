@@ -1,13 +1,13 @@
-.shedule_group {
+.schedule_group {
     text-align: center;
     font-family: $text_body;
     color: $nude;
-    background-color: $brown;
+
     .schedule_title{
         font-family: $text_headline;
         font-size: 3em;
     }
-    .shedule_list {
+    .schedule_list {
     list-style: none;
     }
 }

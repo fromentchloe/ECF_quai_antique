@@ -1,9 +1,9 @@
-<div class="shedule_group container-fluid my-5">
+<div class="schedule_group container-fluid my-5">
     <div class="row">
       <div class=" col-lg-6">
         <h4 class="schedule_title">Horaires d'ouverture</h4>
         <hr class="fw-bold"><i class="bi bi-clock" style= "font-size: 3em"></i>
-        <ul class="shedule_list">
+        <ul class="schedule_list">
           <li class="p-1"><span class="fw-bold">Lundi</span> : Fermé</li>
           <li class="p-1"><span class="fw-bold">Mardi</span> : Fermé</li>
           <li class="p-1"><span class="fw-bold">Mercredi</span> : 12h00 - 14h00 / 19h00 - 22h00</li>

@@ -23,7 +23,7 @@
             <?php require 'views/about.php'; ?>
           </section>
           <section>
-            <?php require 'views/shedule.php'; ?>
+            <?php require 'views/schedule.php'; ?>
           </section>
           <section>
             <?php require 'views/gallery.php'; ?>
