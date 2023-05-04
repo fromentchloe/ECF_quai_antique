@@ -1,5 +1,6 @@
 
 <div class="container-fluid" id="gallery">
+<h4 class="title m-5 p-5">Un avant goût ...</h4>
     <div class="row">
         <div class="col-md-2">
             <div class="gallery-item rounded">

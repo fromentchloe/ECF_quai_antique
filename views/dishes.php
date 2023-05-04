@@ -1,5 +1,5 @@
-<div class="wrapper ">
-    <div class="text-about col-md-8 rounded">
+<div class="wrapper_dishes ">
+    <div class="text-about col-md-4 rounded">
         <h1 class="title">MENU</h1>
         <p class="subtitle" >Découvrez la carte du chef Michant Arnaud</p>
     </div>

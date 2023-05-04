@@ -10,6 +10,7 @@
 @mixin burger-image {
     width: 10%;
     animation: spin 10s linear infinite;
+    margin-left: 2em;
   }
   @keyframes spin {
     from {
@@ -21,3 +22,11 @@
       transform: rotate(360deg);
     }
   }
+
+  @mixin title {
+      color: $nude;
+      font-family: $text_headline;
+      font-size: 3em;
+      text-align: center;
+  }
+  

@@ -4,10 +4,17 @@
     color: $nude;
 
     .schedule_title{
-        font-family: $text_headline;
-        font-size: 3em;
+        @include title;
     }
     .schedule_list {
     list-style: none;
     }
 }
+.cart {
+    border: 5px solid $mid-nude;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  

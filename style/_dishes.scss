@@ -1,7 +1,15 @@
+
+.wrapper_dishes {
+        width: 100%;
+        height: 100vh;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../image/Menu.PNG");
+}
 .group-dishes {
     margin-top: 5%;
     font-family: $text_body;
-
     color: $brown;
 }
 .formule {
@@ -24,5 +32,4 @@
 
 .burger-image {
     @include burger-image;
-    margin-left: 2em;
 }

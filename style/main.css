@@ -87,11 +87,21 @@
   color: #e6ccb2;
 }
 .schedule_group .schedule_title {
+  color: #e6ccb2;
   font-family: "Playfair Display", serif;
   font-size: 3em;
+  text-align: center;
 }
 .schedule_group .schedule_list {
   list-style: none;
+}
+
+.cart {
+  border: 5px solid #b08968;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 form {
@@ -130,6 +140,15 @@ input[type=text], input[type=date], input[type=number], input[type=email], input
   background-color: #7f5539;
 }
 
+.wrapper_dishes {
+  width: 100%;
+  height: 100vh;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../image/Menu.PNG");
+}
+
 .group-dishes {
   margin-top: 5%;
   font-family: "Poppins", sans-serif;
@@ -158,6 +177,13 @@ input[type=text], input[type=date], input[type=number], input[type=email], input
   width: 10%;
   animation: spin 10s linear infinite;
   margin-left: 2em;
+}
+
+.title {
+  color: #e6ccb2;
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  text-align: center;
 }
 
 .gallery-item {
@@ -214,9 +240,6 @@ footer a:hover {
   .jarallax-image {
     top: 110px;
   }
-  .title {
-    font-size: 5em;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1076px) {
   .jarallax-image {
@@ -229,9 +252,6 @@ footer a:hover {
   .navbar-collapse .navbar-brand {
     display: none;
   }
-  .title {
-    font-size: 4em;
-  }
   .cart {
     width: 100%;
   }
@@ -243,9 +263,6 @@ footer a:hover {
   footer ul li i {
     margin-right: 10px;
   }
-  .title {
-    font-size: 3em;
-  }
   .text-about {
     width: 100%;
   }
@@ -255,6 +272,10 @@ footer a:hover {
   }
   .cart {
     width: 100%;
+  }
+  .contact-link {
+    padding: 0;
+    margin: 0;
   }
 }
 body {
