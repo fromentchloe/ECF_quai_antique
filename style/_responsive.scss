@@ -1,0 +1,46 @@
+//Responsive design
+//au dessus de 1076px  
+@media screen and (min-width: 1076px) {
+    .jarallax-image {
+        top: 110px;
+    }
+    .title {
+      font-size: 5em;
+    }
+  }
+  // de 768 a 1076  
+    @media screen and (min-width: 768px) and (max-width: 1076px) {
+      .jarallax-image {
+        top: 0;
+      }
+      .navbar-collapse {
+        display: block;
+        /* Masquer le logo de l'entreprise */
+        .navbar-brand {
+          display: none;
+        }
+      }
+      .title {
+        font-size: 4em;
+      }
+  }
+    // en dessous de 768
+    @media (max-width: 768px) {
+      .contact {
+        margin-left: 25%;
+      }
+      footer ul li i {
+        margin-right: 10px;
+      }
+      .title {
+        font-size: 3em;
+      }
+      .text-about {
+        width: 100%;
+    }
+    form {
+        margin: 0%;
+        width: 100%;
+      }
+  }
+  

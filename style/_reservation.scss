@@ -31,13 +31,3 @@ input[type="text"], input[type="date"], input[type="number"], input[type="email"
     background-color: $brown;
   }
 }
-
- @media screen and (max-width: 800px) {
-        form {
-          margin: 0%;
-          width: 100%;
-        }
-        input[type="submit"] {
-          margin-top: 20px;
-        }
-      }

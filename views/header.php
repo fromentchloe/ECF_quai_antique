@@ -9,7 +9,7 @@
   <div class="navbar-collapse collapse" id="navbarNav">
     <a class="navbar-brand navbar-brand-title" href="index.php">
 <!-- Logo -->
-  <img class="logo" src="./style/image/text+logo.png" width="100" alt="Logo de l'entreprise">
+  <img class="logo" src="./image/text+logo.png" width="100" alt="Logo de l'entreprise">
 </a>
 
     <!-- Liste des liens de navigation -->

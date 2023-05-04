@@ -1,0 +1,23 @@
+@mixin btn-style {
+    background-color: $nude;
+    font-family : $text_body;
+        &:hover {
+            background-color: $mid_nude;
+            color: $brown;
+        }
+}
+
+@mixin burger-image {
+    width: 10%;
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }

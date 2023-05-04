@@ -1,0 +1,37 @@
+/* Définir la couleur de fond de la barre de navigation */
+.navbar {
+    background-color: $brown;
+    font-family: $text_headline;
+  }
+
+  /* Définir le style du logo */
+  .logo {
+      box-shadow: 10px 20px 50px black; 
+  }
+  
+  /* Définir le style de la barre de navigation */
+  .navbar-collapse {
+    /* Définir la disposition de la barre de navigation */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Définir le style des liens de navigation */
+  .nav-link {
+    color: $nude;
+    margin: 0.5em;
+    font-size: 1.2em;   
+  }
+  .dropdown-menu {
+     background-color: $nude;
+     text-align: center;
+     .dropdown-item:hover {
+      background-color: $mid-nude;
+    }
+  }
+  
+  /* Définir le style des liens de contact */
+  .contact-link {
+    @include btn-style;
+  }
+  

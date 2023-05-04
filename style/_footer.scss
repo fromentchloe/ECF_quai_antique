@@ -1,0 +1,12 @@
+footer {
+    padding-top: 5%;
+    font-family: $text_body;
+    color: $nude;
+    a {
+      text-decoration: none;
+      color: $nude;
+      &:hover {
+        color: $brown;
+      }
+    }
+  }

@@ -49,7 +49,7 @@
 <!--A la carte plats -->
  
         <div class="row col-sm-12">
-            <h3 class="m-5 time">Burgers <img class="burger-image" src="./style/image/burger-vecto.png"></h3>
+            <h3 class="m-5 time">Burgers <img class="burger-image" src="./image/burger-vecto.png"></h3>
             
             <div class="row">
             <div class="col-sm-9 content">Le Burger du Chef : Pain artisanal, steak haché de bœuf, fromage bleu, champignons sautés, salade, sauce béarnaise. Servi avec des frites maison. </div>
