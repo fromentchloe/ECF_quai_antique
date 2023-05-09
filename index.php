@@ -34,6 +34,7 @@
       <footer>
         <?php include "views/footer.php"; ?>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-tMvFIFwU6EvwU6hhxnYR9+RJZMDn27n+cLbFJhvV7v1Rpz3cV7Cn2QY/F9/UBCjK" crossorigin=""></script>

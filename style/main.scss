@@ -19,6 +19,7 @@ body {
     box-sizing: border-box;
     background-color: $brown;
 }
+
 hr {
     color: $nude;
 }
@@ -32,7 +33,7 @@ hr {
 .left-to-right.visible,
 .right-to-left.visible {
   opacity: 1;
-  transform: translate(-200);
+  transform: translateY(-200);
 }
 .left-to-right.visible {
   transform: translateX(-10px);

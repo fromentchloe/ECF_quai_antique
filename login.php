@@ -7,19 +7,20 @@
       </div>
       <div class="modal-body">
         <form method="POST" action="login_process.php">
-        <h3 style="text-align: center;" class="modal-title" id="login-modal-label">Se connecter</h3>
+          <h3 style="text-align: center;" class="modal-title" id="login-modal-label">Se connecter</h3>
           <label for="login-email">Email :</label>
           <input type="email" id="login-email" name="email" placeholder="quaiantique@monrestaurant.com" required><br><br>
           
           <label for="password">Mot de passe :</label>
           <input type="password" id="password" name="password" required><br><br>
-        
           
+          <input type="hidden" name="role" value="customer"> <!-- Valeur par défaut du rôle -->
+        
           <input class="submit" type="submit" value="Se connecter"></input>
         </form><hr>
   
         <form class="signup-form" action="signup_process.php" method="POST">
-        <h3 style="text-align: center;">Pas encore de compte... inscription</h3>
+          <h3 style="text-align: center;">Pas encore de compte... inscription</h3>
           <label for="signup-name">Nom :</label>
           <input type="text" id="signup-name" placeholder="Quai Antique" name="name" required>
           
@@ -34,15 +35,13 @@
           
           <label for="allergies">Allergies (optionnel) :</label>
           <textarea id="allergies" placeholder="Arachine, Gluten, Oignon, Tomates..."name="allergies"></textarea>
+
+          <input type="hidden" name="role" value="customer"> <!-- Valeur par défaut du rôle -->
         
           <input class="submit" type="submit" value="S'inscrire">
-          <input class="cancel" type="reset" value="Annuler">
+          <button class="cancel" id="cancel" type="button">Annuler</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-
-
-
-

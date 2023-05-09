@@ -1,6 +1,6 @@
 
 <body style=" text-align: center; background-color: #e6ccb2; color: #7f5539; text-align: center"> 
-    <a href="./index.php"><img src="./style/image/Logo.png"></a>
+    <a href="./index.php"><img src="./image/Logo.png"></a>
 <?php
 // Connexion à la base de données
 require_once 'MySQL/connection_bdd.php';

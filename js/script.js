@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  //gestion du menu burger 
+  // Gestion du menu burger
   $('.navbar-nav').on('click', function() {
     if($('.navbar-collapse').hasClass('show')) {
       $('.navbar-collapse').removeClass('show');
     }
   });
-
-  //transparence de la navbar au scroll
+  
+  // Transparence de la navbar au scroll
   $(document).scroll(function () {
     if($(window).scrollTop() > 20) {
       $('.navbar').css("background", "#7f5539cc");
@@ -14,50 +14,50 @@ $(document).ready(function() {
       $(".navbar").css("background", "#7f5539");
     }
   });
-
-  // Récupérer la modal de réservation 
-  const reservationModal = document.getElementById("reservation-modal");
-  const reservationBtn = document.getElementById("reservation-button");
+  
+  // Récupérer la modal de réservation
+  const reservationModal = $("#reservation-modal");
+  const reservationBtn = $("#reservation-button");
   const reservationCloseBtns = $("#close, #cancel");
   
   function openReservationModal() {
-    reservationModal.style.display = "block";
+    reservationModal.show();
   }
   
   function closeReservationModal() {
-    reservationModal.style.display = "none";
+    reservationModal.hide();
   }
   
   reservationCloseBtns.click(function() {
     closeReservationModal();
   });
   
-  reservationBtn.onclick = function() {
+  reservationBtn.click(function() {
     openReservationModal();
-  };
-
-  // Récupérer la modal de connection 
-  const loginModal = document.getElementById("login-modal");
-  const loginBtn = document.getElementById("login-button");
+  });
+  
+  // Récupérer la modal de connection
+  const loginModal = $("#login-modal");
+  const loginBtn = $("#login-button");
   const loginCloseBtns = $("#close, #cancel");
   
   function openLoginModal() {
-    loginModal.style.display = "block";
+    loginModal.show();
   }
   
   function closeLoginModal() {
-    loginModal.style.display = "none";
+    loginModal.hide();
   }
   
   loginCloseBtns.click(function() {
     closeLoginModal();
   });
   
-  loginBtn.onclick = function() {
+  loginBtn.click(function() {
     openLoginModal();
-  };
+  });
   
-  //verification jour d'ouverture 
+  // Vérification jour d'ouverture
   function checkDate() {
     const selectedDate = new Date($('#selectedDate').val());
     const dayOfWeek = selectedDate.getDay();
@@ -71,47 +71,49 @@ $(document).ready(function() {
       message.css('display', 'none');
     }
   }
-
-  // gallery image 
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  galleryItems.forEach(item => {
-    const img = item.querySelector('img');
-    img.addEventListener('load', () => {
-      item.classList.add('loaded');
+  
+  $('#selectedDate').on('input', checkDate);
+  
+  // Gallery image
+  const galleryItems = $('.gallery-item');
+  galleryItems.each(function() {
+    const img = $(this).find('img');
+    img.on('load', function() {
+      $(this).parent().addClass('loaded');
     });
   });
+  
+  // Apparition gauche à droite
+  const leftToRightElements = $('.left-to-right');
+  const rightToLeftElements = $('.right-to-left');
+  
+  function isVisible(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const threshold = windowHeight - 70;
+  
+    return rect.top <= threshold;
+  }
+  
+  function handleScroll() {
+    leftToRightElements.each(function() {
+      if (isVisible(this)) {
+        $(this).addClass('visible');
+      } else {
+        $(this).removeClass('visible');
+      }
+    });
+  
+    rightToLeftElements.each(function() {
+      if (isVisible(this)) {
+        $(this).addClass('visible');
+      } else {
+        $(this).removeClass('visible');
+      }
+    });
+  }
+  
+  $(window).on('scroll', function() {
+    handleScroll();
+  });
 });
-
-//apparition gauche a droite 
-const leftToRightElements = document.querySelectorAll('.left-to-right');
-const rightToLeftElements = document.querySelectorAll('.right-to-left');
-
-function isVisible(element) {
-  const rect = element.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-  const threshold = windowHeight - 70;
-
-  return rect.top <= threshold;
-}
-
-function handleScroll() {
-  leftToRightElements.forEach((element) => {
-    if (isVisible(element)) {
-      element.classList.add('visible');
-    } else {
-      element.classList.remove('visible');
-    }
-  });
-
-  rightToLeftElements.forEach((element) => {
-    if (isVisible(element)) {
-      element.classList.add('visible');
-    } else {
-      element.classList.remove('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', handleScroll);
-
-

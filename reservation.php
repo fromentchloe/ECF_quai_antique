@@ -9,9 +9,9 @@
         <form method="POST" action="./MySQL/reservation_process.php">
           <label for="name">Nom :</label>
           <input type="text" id="name" name="name" required><br><br>
-          <label for="date">Date :</label>
-          <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required><br><br>
-          <p id="message" style="display:none"></p>
+          <label for="selectedDate">Date :</label>
+            <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required><br><br>
+            <p id="message"></p>
           <label for="time" required>Heure :</label>
           <select id="time" name="time">
             <optgroup label="Midi">
