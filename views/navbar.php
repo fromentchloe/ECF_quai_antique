@@ -1,3 +1,4 @@
+<?php        session_start(); ?>
 <nav class="navbar transparent-background navbar-expand-md fixed-top">
     <div class="container-fluid">
       <!-- Bouton pour le menu déroulant -->
@@ -42,8 +43,8 @@
 <!-- Boutons & formulaire de connexion  -->
 <div class="contact">
     <?php
-        session_start();
-        if (isset($_SESSION['user_id'])) {
+ 
+        if (isset($_SESSION['user_name'])) {
     ?>
             <a class="contact-link p-2 m-2 rounded" href="logout.php">
                 <button type="button" class="btn">Déconnexion</button>

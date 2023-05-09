@@ -26,11 +26,11 @@ if (mysqli_num_rows($result) == 1) {
         header('Location: index.php'); // Rediriger l'utilisateur vers la page d'accueil
     } else {
         // Les informations de connexion sont incorrectes, afficher un message d'erreur
-        echo '<div><h2>Mot de passe incorrect</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Réinitialiser le mot de passe</a></div>';
+        echo '<div><h2>Mot de passe incorrect</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer avec un mot de passe valide </a></div>';
     }
 } else {
     // L'utilisateur n'existe pas, afficher un message d'erreur
-    echo '<div><h2>Email incorrect</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour à l\'accueil</a></div>';
+    echo '<div><h2>Email incorrect</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer avec un mail valide</a></div>';
 }
 
 
