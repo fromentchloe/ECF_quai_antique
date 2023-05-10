@@ -7,10 +7,15 @@
       </div>
       <div class="modal-body">
         <form method="POST" action="./MySQL/reservation_process.php">
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="name" required><br><br>
-          <label for="selectedDate">Date :</label>
-            <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required><br><br>
+        <label for="name">Nom :</label>
+            <?php
+            $user_name = isset($_SESSION['user_name']) ? htmlspecialchars($_SESSION['user_name']) : '';
+            ?>
+            <input type="text" id="name" name="name" value="<?php echo $user_name; ?>" required>
+            <br><br>
+            <label for="selectedDate">Date :</label>
+            <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required>
+            <br><br>
             <p id="message"></p>
           <label for="time" required>Heure :</label>
           <select id="time" name="time">
@@ -39,10 +44,9 @@
           </select><br><br>
           <label for="numPeople">Nombre de personnes :</label>
           <input type="number" id="numPeople" name="numPeople" min="1" max="50" required><br><br>
-          <label for="maxCapacity">Capacité a la date choisie: </label>
-          <span id="maxCapacity"></span><br><br>
-          <input class="submit" type="submit" value="Réserver"></input>
-          <button class="cancel" id="cancel" type="button">Annuler</button>
+          
+          <input class="submit btn" type="submit" value="Réserver"></input>
+          <button class="cancel btn" id="cancel" type="button">Annuler</button>
         </form>
       </div>
     </div>

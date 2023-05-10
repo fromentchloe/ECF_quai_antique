@@ -1,4 +1,5 @@
-<?php        session_start(); ?>
+<?php        session_start(); 
+?>
 <nav class="navbar transparent-background navbar-expand-md fixed-top">
     <div class="container-fluid">
       <!-- Bouton pour le menu déroulant -->
@@ -55,16 +56,15 @@
             <a class="contact-link p-2 m-2 rounded" id="login-button">
                 <button type="button" class="btn" id="open-login-modal" >Se connecter</button>
             </a>
-    <?php
-        }
-    ?>
+            <?php
+            }
 
-
-<!-- Boutons de reservation -->
-    <a class="contact-link p-2 m-2 rounded" id="reservation-button">
-      <button type="button" class="btn" id="open-reservation-modal" >Réserver</button>
-    </a>
-    <?php include "reservation.php"; include "login.php" ?>
+            ?>
+                <a class="contact-link p-2 m-2 rounded" id="reservation-button">
+                    <button type="button" class="btn" id="open-reservation-modal">Réserver</button>
+                </a>
+    
+    <?php include "reservation.php"; include "login.php";?>
    
     </div>
   </div>

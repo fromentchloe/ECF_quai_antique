@@ -116,4 +116,25 @@ $(document).ready(function() {
   $(window).on('scroll', function() {
     handleScroll();
   });
+
+//admin
+  $('#signup-email').on('input', function() {
+    if ($(this).val() === 'quaiantique@restaurant.com') {
+      $('#additional-field').show();
+      $('#customer_view').hide();
+    } else {
+      $('#additional-field').hide();
+      $('#customer_view').show();
+    }
+  });
+
+$("#signup-button").click(function(event) {
+  var adminCode = $("#additional-input").val();
+
+  if (adminCode !== "2023$1582") {
+    event.preventDefault(); // Empêche la redirection par défaut
+    alert("Code restaurant incorrect");
+  }
 });
+});
+
