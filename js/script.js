@@ -137,4 +137,3 @@ $("#signup-button").click(function(event) {
   }
 });
 });
-

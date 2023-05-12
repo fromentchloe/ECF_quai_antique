@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nFJzd3q+miPnQ2KjR+zmhT8yJ0/If+AVK1twwahJnx8x1L+tFljuOtf+y/dzSOJv" crossorigin="">
   </head>
   <body>
+ 
       <header>
         <?php require 'views/navbar.php'; ?>
-    
         <?php include 'views/header.php'; ?>
       </header>
       <main>
         <article>
         <section>
             <?php require 'views/about.php'; ?>
+          
           </section>
           <section>
             <?php require 'views/schedule.php'; ?>
