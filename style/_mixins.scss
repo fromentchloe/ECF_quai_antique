@@ -1,4 +1,5 @@
 @mixin btn-style {
+  color: $brown;
     background-color: $nude;
     font-family : $text_body;
         &:hover {

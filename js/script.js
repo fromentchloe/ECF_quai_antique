@@ -56,7 +56,7 @@ $(document).ready(function() {
   loginBtn.click(function() {
     openLoginModal();
   });
-  
+});
   // Vérification jour d'ouverture
   function checkDate() {
     const selectedDate = new Date($('#selectedDate').val());
@@ -103,7 +103,6 @@ $(document).ready(function() {
         $(this).removeClass('visible');
       }
     });
-  
     rightToLeftElements.each(function() {
       if (isVisible(this)) {
         $(this).addClass('visible');
@@ -126,7 +125,7 @@ $(document).ready(function() {
       $('#additional-field').hide();
       $('#customer_view').show();
     }
-  });
+ 
 
 $("#signup-button").click(function(event) {
   var adminCode = $("#additional-input").val();
@@ -136,4 +135,4 @@ $("#signup-button").click(function(event) {
     alert("Code restaurant incorrect");
   }
 });
-});
+  });

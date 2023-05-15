@@ -20,6 +20,12 @@ hour TIME NOT NULL,
 count INT UNSIGNED NOT NULL
 );
 
+CREATE TABLE images (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  image_path VARCHAR(255),
+  caption VARCHAR(255)
+);
+
 
 
 
