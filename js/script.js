@@ -135,5 +135,8 @@ $("#signup-button").click(function(event) {
     alert("Code restaurant incorrect");
   }
 
-});
-});
+
+function confirmDelete() {
+  return confirm("Êtes-vous sûr de vouloir supprimer cette image ?");
+}
+});});

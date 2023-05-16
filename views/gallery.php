@@ -53,6 +53,7 @@
                         <?php if ($i < count($galleryItems)) { ?>
                             <img src="<?php echo $galleryItems[$i]['image']; ?>" alt="<?php echo $galleryItems[$i]['caption']; ?>">
                             <div class="caption m-2 text-center"><?php echo $galleryItems[$i]['caption']; ?></div>
+                          
                         <?php } else { ?>
                             <img src="#" alt="">
                             <div class="caption m-2 text-center"></div>
@@ -62,15 +63,19 @@
                         <form action="update_image.php" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="image_id" value="<?php echo isset($galleryItems[$i]['id']) ? $galleryItems[$i]['id'] : ''; ?>">
                             <label>Ajouter une légende</label>
-                            <input type="text" name="new_caption" value="<?php echo isset($galleryItems[$i]['caption']) ? $galleryItems[$i]['caption'] : ''; ?>">
-<label>Modifier l'image</label>
-<input type="file" name="new_image">
-<input type="submit" name="send" value="Modifier">
-</form>
-<?php } ?>
-</div>
-<?php } ?>
-</div>
-</div>
+                                <input type="text" name="new_caption" value="<?php echo isset($galleryItems[$i]['caption']) ? $galleryItems[$i]['caption'] : ''; ?>">
+                            <label>Modifier l'image</label>
+                                <input class="btn" type="file" name="new_image">
+                            <input class="contact-link btn" type="submit" name="send" value="Modifier">
+                        </form>
+                        <form action="delete_image.php" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette image ?')">
+                            <input type="hidden" name="image_id" value="<?php echo $galleryItems[$i]['id']; ?>">
+                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                        </form>
 
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </div>
