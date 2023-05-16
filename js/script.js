@@ -134,5 +134,6 @@ $("#signup-button").click(function(event) {
     event.preventDefault(); // Empêche la redirection par défaut
     alert("Code restaurant incorrect");
   }
+
 });
-  });
+});

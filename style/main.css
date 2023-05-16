@@ -185,7 +185,6 @@ p {
   padding: 0.3rem;
   color: #e6ccb2;
   opacity: 0;
-  justify-content: center;
   transition: opacity 0.5s ease-in-out;
   transition: transform 0.5s ease;
 }
