@@ -2,9 +2,12 @@
   <div class="row">
     <div class="right-to-left col-lg-6">
       <h4 class="schedule_title">Horaires d'ouverture</h4>
-      <i class="bi bi-clock" style="font-size: 3em"></i>
+      <i class="bi bi-clock" style="font-size: 3em"></i><br>
 
-      <?php if (isset($_SESSION['user_is_admin']) && $_SESSION['user_is_admin'] === '1') { ?>
+      <?php if (isset($_SESSION['user_is_admin']) && $_SESSION['user_is_admin'] === '1') { ?>         
+        <?php
+          echo 'Semaine du ' . date('d/m/Y') . ' au ' . date('d/m/Y', strtotime('+7 days')) . '<br>';
+        ?>
         <form id="scheduleForm" action="change_schedule.php" method="POST">
           <?php
           $days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
@@ -21,8 +24,15 @@
             $label = ucfirst($day);
             $value = $row[$day] ?? $defaultValues[$day];
             ?>
-            <label for="<?php echo $day; ?>"><?php echo $label; ?>:</label>
-            <input type="text" name="<?php echo $day; ?>" id="<?php echo $day; ?>" value="<?php echo $value; ?>" placeholder="Entrez les horaires de <?php echo $label; ?>">
+          <label style="color: gray" for="<?php echo $day; ?>"><?php echo $label; ?>:</label>
+            <select name="<?php echo $day; ?>" id="<?php echo $day; ?>">
+              <option value="Fermé"<?php echo ($value === 'Fermé') ? ' selected' : ''; ?>>Fermé</option>
+              <option value="12h00-14h00 / 19h00-21h"<?php echo ($value === '12h00-14h00 / 19h00-21h') ? ' selected' : ''; ?>>12h00-14h00 / 19h00-21h</option>
+              <option value="12h00-14h00 / 19h00-22h"<?php echo ($value === '12h00-14h00 / 19h00-22h') ? ' selected' : ''; ?>>12h00-14h00 / 19h00-22h</option>
+              <option value="Fermé / 19h00-21h"<?php echo ($value === 'Fermé / 19h00-21h') ? ' selected' : ''; ?>>Fermé / 19h00-21h</option>
+              <option value="12h00-14h00 / 19h00-21h"<?php echo ($value === '12h00-14h00 / 19h00-21h') ? ' selected' : ''; ?>>12h00-14h00 / 19h00-21h</option>
+              <option value="Exceptionnellement fermé"<?php echo ($value === 'Exceptionnellement fermé') ? ' selected' : ''; ?>>Exceptionnellement fermé</option>
+            </select>
           <?php } ?>
           <button class="contact-link btn" type="submit">Enregistrer</button>
         </form>
@@ -42,6 +52,11 @@
           'dimanche' => '12h00-14h00 / 19h00-21h'
         ];
         ?>
+                  
+            <?php
+          echo 'Semaine du ' . date('d/m/Y') . ' au ' . date('d/m/Y', strtotime('+7 days')) . '<br>';
+
+     ?>
         <ul class="schedule_list">
           <?php foreach ($days as $day) {
             $label = ucfirst($day);
