@@ -46,8 +46,8 @@
           <label for="retype_password">Re-tapez votre Mot de passe : </label>
             <input type="password" id="retype_password" name="retype_password" required>
           
-          <label for="allergies">Allergies (optionnel) :</label>
-            <textarea id="allergies" placeholder="Arachine, Gluten, Oignon, Tomates..."name="allergies"></textarea>
+          <label for="allergy">Allergies (optionnel) :</label>
+            <textarea id="allergy" placeholder="Arachine, Gluten, Oignon, Tomates..."name="allergy"></textarea>
 
           <input class="submit btn" type="submit" value="S'inscrire">
           <button class="cancel btn" id="cancel" type="button">Annuler</button>

@@ -5,8 +5,14 @@
     $name = $_POST['name'];
     $date = $_POST['date'];
     $time = $_POST['time'];
+    $found = false;
     $numPeople = $_POST['numPeople'];
+    $allergy = $_POST['allergy'];
     $currentDate = date('Y-m-d');
+
+
+    
+
 
     $sql = "SELECT SUM(count) as total_count FROM reservations WHERE hour = '$time'";
     $result = $conn->query($sql);
@@ -30,7 +36,7 @@
                 echo '<h2>La date saisie est antérieure à la date actuelle. Veuillez sélectionner une date valide</h2><br>';
                 echo '<a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="index.php">Page précédente</a></div>';
             } else {
-                $sql = "INSERT INTO reservations (name, date, hour, count) VALUES ('$name', '$date', '$time', '$numPeople')";
+                $sql = "INSERT INTO reservations (name, date, hour, count, allergy) VALUES ('$name', '$date', '$time', '$numPeople', $allergy )";
                 if ($conn->query($sql) === TRUE) {
                     $date = strftime('%d/%m/%Y', strtotime($date));
                     echo '<h2>Réservation enregistrée au nom de ' . $name . ', nous vous attendons le ' . $date . ' à ' . $time . '</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page Précédente</a></div>';
