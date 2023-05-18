@@ -47,13 +47,23 @@
 
 /* Définir le style des liens de contact */
 .contact-link {
-  color: #7f5539;
-  background-color: #e6ccb2;
+  color: #e6ccb2;
+  background-color: #7f5539;
   font-family: "Poppins", sans-serif;
 }
 .contact-link:hover {
   background-color: #b08968;
+  color: #e6ccb2;
+}
+
+.contactbtn {
   color: #7f5539;
+  background-color: #e6ccb2;
+  font-family: "Poppins", sans-serif;
+}
+.contactbtn:hover {
+  background-color: #b08968;
+  color: #e6ccb2;
 }
 
 .wrapper {
@@ -87,10 +97,11 @@ form {
   background-color: #e6ccb2;
   padding: 3%;
   border-radius: 10px;
-  box-shadow: 0 0 10px #7f5539;
+  box-shadow: 0 0 10px black;
 }
 
 label {
+  color: #7f5539;
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
@@ -106,16 +117,10 @@ input[type=text], input[type=date], input[type=number], input[type=email], input
   color: #7f5539;
 }
 
-.submit, .cancel {
-  background-color: #b08968;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-}
-.submit:hover, .cancel:hover {
-  background-color: #7f5539;
+.modal-title {
+  text-align: center;
+  color: #7f5539;
+  text-decoration: underline;
 }
 
 .about_title {

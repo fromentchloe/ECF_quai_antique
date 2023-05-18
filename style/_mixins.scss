@@ -1,13 +1,21 @@
 @mixin btn-style {
+  color: $nude;
+    background-color: $brown;
+    font-family : $text_body;
+        &:hover {
+            background-color: $mid_nude;
+            color: $nude;
+        }
+}
+@mixin btn-link {
   color: $brown;
     background-color: $nude;
     font-family : $text_body;
         &:hover {
             background-color: $mid_nude;
-            color: $brown;
+            color: $nude;
         }
 }
-
 @mixin burger-image {
     width: 10%;
     animation: spin 10s linear infinite;

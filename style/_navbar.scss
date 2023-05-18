@@ -35,4 +35,8 @@
   .contact-link {
     @include btn-style;
   }
+
+  .contactbtn {
+    @include  btn-link;
+  }
   

@@ -38,5 +38,6 @@
         // L'utilisateur n'existe pas, afficher un message d'erreur
         echo '<div><h2>Email incorrect</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer avec un email valide</a></div>';
     }
+    $conn->close();
     ?>
 </body>

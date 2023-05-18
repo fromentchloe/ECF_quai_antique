@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <form method="POST" action="login_process.php">
-          <h3 style="text-align: center;" class="modal-title" id="login-modal-label">Se connecter</h3>
+          <h3  class="modal-title" id="login-modal-label">Se connecter</h3>
           <label for="login-email">Email :</label>
           <input type="email" id="login-email" name="email" required><br><br>
 
@@ -15,23 +15,24 @@
           
           <label for="password">Mot de passe :</label>
           <input type="password" id="password" name="password" required><br><br>
+          <div class="d-flex justify-content-between align-items-center">
+          <input class="contact-link btn" type="submit" value="Se connecter"></input>
+          <button class=" contact-link btn" id="signup-link" type="button">s'inscrire</button>
+          </div>
           
-          <input type="hidden" name="role" value="customer"> <!-- Valeur par défaut du rôle -->
-
-          <input class="submit btn" type="submit" value="Se connecter"></input>
         </form><hr>
-  
+        <div id="signup-content" style="display: none;">
         <form class="signup-form" action="signup_process.php" method="POST">
-          <h3 style="text-align: center;">Pas encore de compte... inscription</h3>
          
-          
+        <h3  class="modal-title">Inscription</h3>
+        
           <label for="signup-email">Email :</label>
             <input type="email" id="signup-email" placeholder="quaiAntique@email.com" name="email" required>
           
           <div id="additional-field" style="display: none;" >
             <label for="additional-input">Code restaurant :</label>
               <input type="password" id="additional-input" name="additionalInput">
-              <a class="submit btn" href="admin_signup.php" id="signup-button">Ajoutez un administrateur 
+              <a class="contact-link btn" href="admin_signup.php" id="signup-button">Ajoutez un administrateur 
 
               </a>
           </div>
@@ -48,9 +49,10 @@
           
           <label for="allergy">Allergies (optionnel) :</label>
             <textarea id="allergy" placeholder="Arachine, Gluten, Oignon, Tomates..."name="allergy"></textarea>
+            <div class="d-flex justify-content-center align-items-center">
+          <input class="contact-link btn" type="submit" value="S'enregistrer"></div>
 
-          <input class="submit btn" type="submit" value="S'inscrire">
-          <button class="cancel btn" id="cancel" type="button">Annuler</button>
+          </div>
         </div>
         </form>
       </div>

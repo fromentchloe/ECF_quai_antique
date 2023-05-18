@@ -2,11 +2,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="reservation-modal-label">Réservation</h2>
+        
         <button type="button" class="btn-close" id="close"></button>
       </div>
       <div class="modal-body">
+
         <form method="POST" action="./MySQL/reservation_process.php">
+        <h2 class="modal-title" id="reservation-modal-label">Réservation</h2>
           <label for="name">Nom :</label>
           <?php
           $user_name = isset($_SESSION['user_name']) ? htmlspecialchars($_SESSION['user_name']) : '';
@@ -47,10 +49,10 @@
           ?>
           <input type="text" id="allergy" name="allergy" value="<?php echo $user_allergy; ?>">
           <br><br>
-         <?php $totalCount = $row['total_count'];?>
-          <label>Nombre total de réservations : <?php echo $total_count; ?></label>
-          <input class="submit btn" type="submit" value="Réserver">
-          <button class="cancel btn" id="cancel" type="button">Annuler</button>
+          <div class="d-flex justify-content-between align-items-center">
+          <input class="contact-link btn" type="submit" value="Réserver">
+          <button class="contact-link btn" id="cancel" type="button">Annuler</button>
+          </div>
         </form>
       </div>
     </div>

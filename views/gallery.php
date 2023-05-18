@@ -3,14 +3,14 @@
         <div class="text-center">
             <h4 class="title m-4 p-4 col-md-12">
                 <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="gallery-item right-to-left rounded">
                             <img src="./image/bar.png" alt="Notre bar">
                             <div style='font-size: 40%' class="caption mt-2">Notre Bar</div>
                         </div>
                     </div>
-                    Avant goût
-                    <div class="col-md-3">
+                    Réveillons vos Papilles ...
+                    <div class="col-md-2">
                         <div class="gallery-item left-to-right rounded">
                             <img src="./image/exterieur.png" alt="Vue de l'extérieur">
                             <div style='font-size: 40%' class="caption mt-2">Vue de l'extérieur</div>
@@ -77,5 +77,16 @@
                 </div>
             <?php } ?>
         </div>
+        <div class="d-flex justify-content-between">
+            <img src="./image/logo.png" style="width:10%" alt="Logo de l'entreprise">
+            <a class=" contactbtn p-2 m-2 rounded" id="reservation-button">
+                    <button type="button" class="btn" id="open-reservation-modal">Réserver</button>
+                </a>
+            <img src="./image/logo.png" style="width:10%" alt="Logo de l'entreprise">
+        </div>
+    </div>
+</div>
+
+<?php include "reservation.php" ?>
     </div>
 </div>

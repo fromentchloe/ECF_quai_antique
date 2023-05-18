@@ -47,20 +47,20 @@
  
         if (isset($_SESSION['user_name'])) {
     ?>
-            <a class="contact-link p-2 m-2 rounded" href="logout.php">
+            <a class="contactbtn p-2 m-2 rounded" href="logout.php">
                 <button type="button" class="btn">Déconnexion</button>
             </a>
     <?php
         } else {        
     ?>
-            <a class="contact-link p-2 m-2 rounded" id="login-button">
+            <a class="contactbtn p-2 m-2 rounded" id="login-button">
                 <button type="button" class="btn" id="open-login-modal" >Se connecter</button>
             </a>
             <?php
             }
 
             ?>
-                <a class="contact-link p-2 m-2 rounded" id="reservation-button">
+                <a class=" contactbtn p-2 m-2 rounded" id="reservation-button">
                     <button type="button" class="btn" id="open-reservation-modal">Réserver</button>
                 </a>
     

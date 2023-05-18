@@ -4,9 +4,10 @@ form {
   background-color:$nude;
   padding: 3%;
   border-radius: 10px;
-  box-shadow: 0 0 10px $brown;
+  box-shadow: 0 0 10px black;
 }
 label {
+  color: $brown;
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
@@ -20,14 +21,9 @@ input[type="text"], input[type="date"], input[type="number"], input[type="email"
   font-size: 16px;
   color: #7f5539;
 }
-.submit , .cancel {
-  background-color: #b08968;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  &:hover {
-    background-color: $brown;
-  }
+
+.modal-title {
+  text-align: center; 
+  color: #7f5539;
+  text-decoration: underline;
 }

@@ -66,5 +66,6 @@
             echo "Erreur : " . mysqli_error($conn);
         }
     }
+    $conn->close();
     ?>
 </body>

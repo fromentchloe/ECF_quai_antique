@@ -115,7 +115,12 @@ $(document).ready(function() {
   $(window).on('scroll', function() {
     handleScroll();
   });
+  $("#signup-link").click(function() {
+    $("#signup-content").hide(); 
 
+    $("#signup-link").click(function() {
+      $("#signup-content").toggle(); 
+    });});
 //admin
   $('#signup-email').on('input', function() {
     if ($(this).val() === 'quaiantique@restaurant.com') {
@@ -140,3 +145,4 @@ function confirmDelete() {
   return confirm("Êtes-vous sûr de vouloir supprimer cette image ?");
 }
 });});
+
