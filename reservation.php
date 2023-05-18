@@ -47,7 +47,8 @@
           ?>
           <input type="text" id="allergy" name="allergy" value="<?php echo $user_allergy; ?>">
           <br><br>
-
+         <?php $totalCount = $row['total_count'];?>
+          <label>Nombre total de réservations : <?php echo $total_count; ?></label>
           <input class="submit btn" type="submit" value="Réserver">
           <button class="cancel btn" id="cancel" type="button">Annuler</button>
         </form>

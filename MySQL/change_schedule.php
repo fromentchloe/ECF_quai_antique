@@ -1,5 +1,7 @@
+<body style="background-color: #e6ccb2; color: #7f5539; text-align: center"> 
+    <a href="../index.php"><img src="../image/Logo.png"></a>
 <?php
-require_once 'MySQL/connection_bdd.php';
+     require "./connection_bdd.php";
 
 // Vérifie si la requête est de type POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

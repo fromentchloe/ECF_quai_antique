@@ -8,7 +8,7 @@
         <?php
           echo 'Semaine du ' . date('d/m/Y') . ' au ' . date('d/m/Y', strtotime('+7 days')) . '<br>';
         ?>
-        <form id="scheduleForm" action="change_schedule.php" method="POST">
+        <form id="scheduleForm" action="./MySQL/change_schedule.php" method="POST">
           <?php
           $days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
           $defaultValues = [
