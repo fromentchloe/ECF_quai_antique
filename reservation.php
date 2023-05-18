@@ -39,7 +39,7 @@
             </optgroup>
           </select><br><br>
           <label for="numPeople">Nombre de personnes :</label>
-          <input type="number" id="numPeople" name="numPeople" min="1" max="50" required><br><br>
+          <input type="number" id="numPeople" name="numPeople" min="1" max="70" required><br><br>
 
           <label for="allergy">Allergies :</label>
           <?php
