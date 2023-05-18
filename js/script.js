@@ -144,5 +144,16 @@ $("#signup-button").click(function(event) {
 function confirmDelete() {
   return confirm("Êtes-vous sûr de vouloir supprimer cette image ?");
 }
-});});
+var rainImages = $(".rain-image");
+
+// Parcours toutes les images de pluie
+rainImages.each(function(index, image) {
+  // Génère une position horizontale aléatoire pour chaque image
+  var randomX = Math.floor(Math.random() * $(window).width()) + "px";
+  $(image).css("left", randomX);
+});
+});
+
+});
+
 

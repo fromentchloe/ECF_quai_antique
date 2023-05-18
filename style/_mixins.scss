@@ -17,7 +17,7 @@
         }
 }
 @mixin burger-image {
-    width: 10%;
+    width: 5%;
     animation: spin 10s linear infinite;
     margin-left: 2em;
   }
@@ -30,6 +30,7 @@
       opacity: 1;
       transform: rotate(360deg);
     }
+    
   }
 
   @mixin title {

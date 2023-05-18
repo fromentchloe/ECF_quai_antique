@@ -3,24 +3,15 @@
 <div  class="container" id="gallery">
     <div class="row">
         <div class="text-center">
-            <h4 class="title col-md-12">
-                <div class="row d-flex justify-content-evenly align-items-center">
-                    <div class="col-md-2">
-                        <div class="gallery-item right-to-left rounded">
-                            <img src="./image/bar.png" alt="Notre bar">
-                            <div style='font-size: 40%' class="caption mt-2">Notre Bar</div>
-                        </div>
-                    </div>
+            <h4 class="title col-md-12 m-2 p-2">
+               
                     Galerie 
-                    <div class="col-md-2">
-                        <div class="gallery-item left-to-right rounded">
-                            <img src="./image/exterieur.png" alt="Vue de l'extérieur">
-                            <div style='font-size: 40%' class="caption mt-2">Vue de l'extérieur</div>
-                        </div>
-                    </div>
-                </div>
+                   
+                
             </h4>
+           
         </div>
+        <hr>
         <?php
         require_once 'MySQL/connection_bdd.php';
 
@@ -49,19 +40,21 @@
         ?>
 
         <div class="row">
-            <?php for ($i = 0; $i < 12; $i++) { ?>
-                <div class="col-md-3">
-                    <div class="gallery-item right-to-left rounded">
-                        <?php if ($i < count($galleryItems)) { ?>
-                            <img src="<?php echo $galleryItems[$i]['image']; ?>" alt="<?php echo $galleryItems[$i]['caption']; ?>">
-                            <div class="caption m-2 text-center"><?php echo $galleryItems[$i]['caption']; ?></div>
-                          
-                        <?php } else { ?>
-                            <img src="#" alt="">
-                            <div class="caption  text-center"></div>
-                        <?php } ?>
+        <?php for ($i = 0; $i < 12; $i++) { ?>
+    <div class="col-md-3">
+        <div class="gallery-item right-to-left rounded">
+            <?php if ($i < count($galleryItems)) { ?>
+                <img src="<?php echo $galleryItems[$i]['image']; ?>" alt="<?php echo $galleryItems[$i]['caption']; ?>">
+                <div class="caption m-2 text-center"><?php echo $galleryItems[$i]['caption']; ?></div>
+
+
+            <?php } else { ?>
+                <img src="#" alt="">
+                <div class="caption text-center"></div>
+            <?php } ?>
                     </div>
                     <?php if (isset($_SESSION['user_is_admin']) && $_SESSION['user_is_admin'] === '1') { ?>
+                       
                         <form action="update_image.php" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="image_id" value="<?php echo isset($galleryItems[$i]['id']) ? $galleryItems[$i]['id'] : ''; ?>">
                             <label>Ajouter une légende</label>

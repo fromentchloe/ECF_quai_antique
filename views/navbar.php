@@ -27,7 +27,7 @@
         <a class="nav-link" href="./index.php#gallery">Galerie</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="carte.php" role="button" data-bs-toggle="dropdown">
+        <a class="nav-link dropdown-toggle" href="./index.php#carte" role="button" data-bs-toggle="dropdown">
           La carte
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

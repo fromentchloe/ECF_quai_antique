@@ -21,7 +21,7 @@ body {
 
 }
 
-.custom-hr {
+.custom_hr {
   margin: 0 auto;
     color: $nude;
     width: 50%;
@@ -33,11 +33,6 @@ hr {
   color: $nude;
 }
 
-.vertical-line {
-  margin: 10%;
-  border-left: 1px solid black;
-  height: 100px; /* Définissez la hauteur souhaitée de votre ligne verticale */
-}
 
 .left-to-right,
 .right-to-left {
@@ -58,4 +53,3 @@ hr {
   transform: translateX(10px);
 }
 
-  

@@ -16,6 +16,17 @@
 .navbar {
   background-color: #7f5539;
   font-family: "Playfair Display", serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navbar.hidden {
+  opacity: 0;
 }
 
 /* Définir le style du logo */
@@ -45,8 +56,8 @@
   text-align: center;
 }
 .dropdown-menu .dropdown-item:hover {
-  color: #e6ccb2;
-  background-color: #b08968;
+  color: #7f5539;
+  background-color: #e6ccb2;
 }
 
 /* Définir le style des liens de contact */
@@ -227,9 +238,9 @@ p {
 }
 
 .formule {
-  background-color: #e6ccb2;
+  background-color: #b08968;
   text-align: center;
-  border: 10px solid #b08968;
+  border: 10px solid #e6ccb2;
 }
 .formule .time {
   list-style: none;
@@ -245,7 +256,7 @@ p {
 }
 
 .burger-image {
-  width: 10%;
+  width: 5%;
   animation: spin 10s linear infinite;
   margin-left: 2em;
 }
@@ -263,15 +274,7 @@ footer a:hover {
   color: #7f5539;
 }
 
-@media screen and (min-width: 1076px) {
-  .jarallax-image {
-    top: 110px;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1076px) {
-  .jarallax-image {
-    top: 0;
-  }
   .navbar-collapse {
     display: block;
     /* Masquer le logo de l'entreprise */
@@ -310,7 +313,7 @@ body {
   background-color: #7f5539;
 }
 
-.custom-hr {
+.custom_hr {
   margin: 0 auto;
   color: #e6ccb2;
   width: 50%;
@@ -321,12 +324,6 @@ body {
 
 hr {
   color: #e6ccb2;
-}
-
-.vertical-line {
-  margin: 10%;
-  border-left: 1px solid black;
-  height: 100px; /* Définissez la hauteur souhaitée de votre ligne verticale */
 }
 
 .left-to-right,

@@ -1,10 +1,29 @@
-<hr>
+
 <div class="container">
   <div class="row">
-    <div class="col-12">
-      <h3 class="left-to-right title m-3">Nos petits plus</h3>
-    </div>
-  </div>
+  <div class="text-center">
+            <h4 class="title col-md-12">
+                <div class="row d-flex justify-content-evenly align-items-center">
+                    <div class="col-md-2 ">
+                    <hr class="custom_hr m-2">
+                        <div class="gallery-item right-to-left rounded">
+                        
+                            <img class="m-2"src="./image/bar.png" alt="Notre bar">
+                            <div style='font-size: 40%' class="caption mt-2">Notre Bar</div>
+                        </div>
+                    </div>
+                    Nos petits plus
+                    
+                    <div class="col-md-2">
+                        <div class="gallery-item left-to-right rounded">
+                            <img class="m-2"src="./image/exterieur.png" alt="Vue de l'extérieur">
+                            <div style='font-size: 40%' class="caption mt-2">Vue de l'extérieur</div>
+                            <hr class="custom_hr m-2">
+                        </div>
+                    </div>
+                </div>
+            </h4>
+        </div>
 
   <div class="row m-3">
     <div class="col-md-6  text-center right-to-left">
@@ -24,21 +43,22 @@
 
   <div class="row m-5">
   <div class="col-md-6  text-center right-to-left">
-      <h4 class=" text_body p-4" style="text-decoration: overline;">Nos Serveurs</h4>
+      <h4 class=" text_body p-4" style="text-decoration: overline;">Nos Equipes</h4>
       <img width="30%" height="40%" src="./image/equipe.png" class="rounded-circle m-2">
       <p>
 Notre équipe dynamique mettra tout en œuvre pour vous offrir un service amical et une atmosphère joyeuse, afin que vous vous sentiez accueilli et heureux à chaque visite.</p>
       
     </div>
     <div class="col-md-6  text-center left-to-right">
-    <h4 class=" text_body p-4" style="text-decoration: overline;">Nos cuisiniers</h4>
-      <p>Nos cuisiniers sont animés par une passion ardente pour l'art culinaire, créant avec l'aide de Chef Michant ainsi des plats savoureux qui ravissent les papilles.</p>
+    <h4 class=" text_body p-4" style="text-decoration: overline;">Nos produits </h4>
+      <p>Nos cuisiniers à on coeur de travailler Avec des ingrédients locaux de qualité, comme des fromages délicieux, des viandes savoureuses et des légumes frais, ils créent des burgers uniques qui ravissent les papilles.</p>
       <img width="30%" height="40%" src="./image/chef_cuistot.png" class="rounded-circle m-2">
     </div>
     </div>
-  </div>
-    <div class="col-md-6">
-      <!-- Contenu de la troisième ligne (colonne 2) -->
+
+    <div id="carte" class="d-flex justify-content-end align-items-center">
+    <hr class="custom_hr">
+       <a class="title" href="./carte.php">Voir la carte <i class="bi bi-arrow-right"></i></a>
+       
     </div>
-  </div>
 </div>

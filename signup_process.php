@@ -15,14 +15,13 @@
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $password_hash = password_hash($password, PASSWORD_ARGON2I); // Hasher le mot de passe
     $retype_password = mysqli_real_escape_string($conn, $_POST['retype_password']);
-    $allergy = mysqli_real_escape_string($conn, $_POST['allergy']);
     $additionalInput = mysqli_real_escape_string($conn, $_POST['additionalInput']);
         
     // Vérification que les deux mots de passe sont identiques
     if ($password != $retype_password) {
         echo '<div><h2>Les deux mots de passe ne correspondent pas. Veuillez recommencer.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour</a></div>';
         exit(); 
-    }
+    } 
 
     // Vérifier si l'utilisateur existe déjà en base de données
     $stmt = mysqli_prepare($conn, "SELECT COUNT(*) FROM users WHERE email = ?");
@@ -42,6 +41,7 @@
             // L'utilisateur n'a pas entré le bon code de restaurant, pas de droits d'administration
             $is_admin = 0;
         }
+        }
 
         // Requête SQL pour insérer un nouvel utilisateur dans la base de données
         $stmt = mysqli_prepare($conn, "INSERT INTO users (name, email, password, is_admin, allergy) VALUES (?, ?, ?, ?, ?)");
@@ -59,13 +59,13 @@
                 header('Location: index.php?role=admin');
                 exit();
             } else {
-                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page d\'accueil </a></div>';
+                header('Location: index.php?role=user');
             }
         } else {
             // L'inscription a échoué, afficher un message d'erreur
             echo "Erreur : " . mysqli_error($conn);
         }
-    }
+    
     $conn->close();
     ?>
 </body>
