@@ -1,15 +1,17 @@
-<div class="container-fluid" id="gallery">
+
+
+<div  class="container" id="gallery">
     <div class="row">
         <div class="text-center">
-            <h4 class="title m-4 p-4 col-md-12">
-                <div class="row d-flex justify-content-between align-items-center">
+            <h4 class="title col-md-12">
+                <div class="row d-flex justify-content-evenly align-items-center">
                     <div class="col-md-2">
                         <div class="gallery-item right-to-left rounded">
                             <img src="./image/bar.png" alt="Notre bar">
                             <div style='font-size: 40%' class="caption mt-2">Notre Bar</div>
                         </div>
                     </div>
-                    Réveillons vos Papilles ...
+                    Galerie 
                     <div class="col-md-2">
                         <div class="gallery-item left-to-right rounded">
                             <img src="./image/exterieur.png" alt="Vue de l'extérieur">
@@ -56,7 +58,7 @@
                           
                         <?php } else { ?>
                             <img src="#" alt="">
-                            <div class="caption m-2 text-center"></div>
+                            <div class="caption  text-center"></div>
                         <?php } ?>
                     </div>
                     <?php if (isset($_SESSION['user_is_admin']) && $_SESSION['user_is_admin'] === '1') { ?>
@@ -77,16 +79,10 @@
                 </div>
             <?php } ?>
         </div>
-        <div class="d-flex justify-content-between">
-            <img src="./image/logo.png" style="width:10%" alt="Logo de l'entreprise">
-            <a class=" contactbtn p-2 m-2 rounded" id="reservation-button">
-                    <button type="button" class="btn" id="open-reservation-modal">Réserver</button>
-                </a>
-            <img src="./image/logo.png" style="width:10%" alt="Logo de l'entreprise">
-        </div>
+       
     </div>
 </div>
 
-<?php include "reservation.php" ?>
     </div>
 </div>
+<hr>

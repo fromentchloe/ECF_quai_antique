@@ -21,12 +21,17 @@
   .nav-link {
     color: $nude;
     margin: 0.5em;
-    font-size: 1.2em;   
+    font-size: 1.2em; 
+    &:hover {
+      color: $mid-nude;
+    }  
   }
   .dropdown-menu {
      background-color: $nude;
      text-align: center;
+     
      .dropdown-item:hover {
+      color: $nude;
       background-color: $mid-nude;
     }
   }

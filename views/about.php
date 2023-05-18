@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="col-sm-8">
-      <h3 class="left-to-right about_title p-5">A propos ...</h3>
+      <h3 class="left-to-right title p-5" >Le Restaurant  </h3>
       <p class="about_text">Pour son troisième restaurant de burger, le chef Michant a choisi de s'implanter au cœur de Chambéry, 
       dans un quartier animé et dynamique de la ville. Il a voulu créer un lieu convivial où les clients 
       pourraient se sentir à l'aise et profiter d'une expérience culinaire exceptionnelle.</p>
@@ -23,10 +23,11 @@
       <p>En somme, le restaurant de burger du Chef Michaud à Chambéry est un endroit incontournable pour tous 
       les amateurs de burgers qui cherchent une expérience culinaire de qualité dans une atmosphère chaleureuse 
       et conviviale.</p>
-      <hr>
+      <hr class="custom-hr">
     </div>
   </div>
 </div>
+<hr>
 
 
 

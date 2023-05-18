@@ -30,6 +30,7 @@
           </section>
           <section>
             <?php require 'views/gallery.php'; ?>
+            <?php include "views/expertise.php"; ?>
           </section>
         </article>
       </main>

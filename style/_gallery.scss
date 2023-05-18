@@ -39,3 +39,10 @@
   transform: scale(1.1);
 }
 
+.text_body {
+  @include text_body;
+}
+
+
+
+

@@ -33,10 +33,13 @@
   }
 
   @mixin title {
-      color: $nude;
+    
+    text-shadow: 1px 1px 1.5px $nude, 0 0 1em $nude, 0 0 0.2em $mid_nude;
+      color: transparent;
       font-family: $text_headline;
       font-size: 3em;
       text-align: center;
+
   }
   @mixin text_body {
     font-family: $text_body;
