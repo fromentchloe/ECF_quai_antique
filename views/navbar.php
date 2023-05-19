@@ -1,21 +1,18 @@
-<?php        session_start(); 
+<?php    
 ?>
-<nav class="navbar transparent-background navbar-expand-md fixed-top">
+<nav id="navbar" class="navbar transparent-background navbar-expand-md fixed-top">
     <div class="container-fluid">
-      <!-- Bouton pour le menu déroulant -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
       </button>
-
-<!-- Menu déroulant -->
-  <div class="navbar-collapse collapse" id="navbarNav">
-    <a class="navbar-brand navbar-brand-title" href="index.php">
-<!-- Logo -->
-  <img class="logo" src="./image/text+logo.png" width="100" alt="Logo de l'entreprise">
-</a>
+    <div class="navbar-collapse collapse" id="navbarNav">
+        <a class="navbar-brand navbar-brand-title" href="index.php">
+          <img class="logo" src="./image/text+logo.png" width="100" alt="Logo de l'entreprise">
+        </a>
 
     <!-- Liste des liens de navigation -->
-    <ul class="navbar-nav">
+
+<ul class="navbar-nav justify-content-center">
     <li class="nav-item ">
         <a class="nav-link" href="#about">À propos</a>
       </li>
@@ -39,8 +36,8 @@
       </li>
       
     </ul>
-  </div>
-
+ 
+    </div>
 <!-- Boutons & formulaire de connexion  -->
 <div class="contact">
     <?php
@@ -53,7 +50,7 @@
     <?php
         } else {        
     ?>
-            <a class="contactbtn p-2 m-2 rounded" id="login-button">
+            <a class="contactbtn p-2  rounded" id="login-button">
                 <button type="button" class="btn" id="open-login-modal" >Se connecter</button>
             </a>
             <?php
@@ -65,8 +62,9 @@
                 </a>
     
     <?php include "reservation.php"; include "login.php";?>
-   
-    </div>
+</div>
+</div>
+    
   </div>
   </div>
 </nav>

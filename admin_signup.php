@@ -12,29 +12,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
   </head>
-  <body class="d-flex  justify-content-center" style="height: 100vh;">
-  <form id="admin-form" action="signup_process.php" class=" col-md-6 " method="POST">
-    <h1>Ajout d'un Administrateur</h1>
+  <body class="d-flex justify-content-center align-items-center mt-2" style="height:100vh">
+  <form id="admin-form" action="signup_process.php" class="col-md-6" method="POST">
+    <h2>Ajout d'un Administrateur</h2>
     <label for="name">Nom :</label>
         <input type="text" id="name" name="name" required>
     
     <label for="email">Email :</label>
         <input type="email" id="email" value="quaiantique@restaurant.com" name="email" required>
-
+        <span style="color:red; font-size: 0.7em;"> Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre majuscule, une lettre minuscule et un chiffre.</span>
     <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
-    <label for="retype_password">Confirmer le mot de passe :</label>
-        <input type="password" id="retype_password" name="retype_password" required><br><br>
-
+        <label for="retype_password"> Confirmer Mot de passe</label>
+        <input type="password" class="form-control" id="retype_password"  name="retype_password"  required>
     
         <div id="additional-field">
             <label for="additional-input">Code restaurant :</label>
               <input type="password" id="additional-input" name="additionalInput">
-              <a class="contact-link btn" href="admin_signup.php" id="signup-button">Ajoutez un administrateur 
-
-              </a>
-          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+        <input class="contact-link btn" type="submit" value="Ajoutez un administrateur "></div>
   </form>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

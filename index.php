@@ -14,8 +14,13 @@
    
   </head>
   <body>
- 
+
       <header>
+        <?php session_start();
+         if (isset($_COOKIE['session'])) {
+                setcookie('session', '', time() - 3600, '/');
+            }
+            ?>
         <?php require 'views/navbar.php'; ?>
         <?php include 'views/header.php'; ?>
       </header>
@@ -36,6 +41,8 @@
       </main>
       <footer>
         <?php include "views/footer.php"; ?>
+        <?php $conn->close(); ?>
+
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

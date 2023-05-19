@@ -1,13 +1,16 @@
 //Responsive design
 //au dessus de 1076px  
-@media screen and (min-width: 1076px) {
+@media screen and (min-width: 956px) {
     
     
   }
-  // de 768 a 1076  
-    @media screen and (min-width: 768px) and (max-width: 1076px) {
-      
+  // de 771 a 956 
+    @media screen and (min-width: 771px) and (max-width: 956px) {
+      .navbar {
+        height: 10%;
+      }
       .navbar-collapse {
+        background-color: $brown;
         display: block;
         /* Masquer le logo de l'entreprise */
         .navbar-brand {
@@ -19,15 +22,16 @@
         width: 100%;
       }
   }
-    // en dessous de 768
-    @media (max-width: 768px) {
-      .contact {
-        margin-left: 25%;
-      }
+    // en dessous de 771
+    @media (max-width: 771px) {
+      
       footer ul li i {
         margin-right: 10px;
       }
-
+      .navbar-collapse {
+        background-color: $brown;
+        border-radius: 10%;
+      }
       .text-about {
         width: 100%;
     }
@@ -35,14 +39,25 @@
         margin: 0%;
         width: 100%;
       }
-   
+      
       .cart {
        margin-left: 10px ;
   
       }
-      .contact-link {
-          padding: 0;
-          margin: 0;
+      
+      .navbar {
+        color: $nude;
+        height: 10%;
+      }
+      .navbar-brand {
+        display: none;
+      }
+    
+      .gallery-item {
+        width: auto;
+      }
+      .menu {
+        font-size: 30px
       }
   };
   

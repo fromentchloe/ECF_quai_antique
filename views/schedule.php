@@ -1,7 +1,7 @@
 
-<div class="schedule_group container-fluid " id="schedule">
+<div class="schedule_group container " id="schedule">
   <div class="row">
-    <div class="right-to-left col-lg-6">
+    <div class="right-to-left col-md-6">
     <hr class="custom-hr">
       <h4 class="title mt-5">Horaires d'ouverture</h4>
       <i class="bi bi-clock" style="font-size: 3em"></i><br>

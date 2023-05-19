@@ -19,9 +19,9 @@
         
     // Vérification que les deux mots de passe sont identiques
     if ($password != $retype_password) {
-        echo '<div><h2>Les deux mots de passe ne correspondent pas. Veuillez recommencer.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour</a></div>';
+        echo '<div><h2>Les deux mots de passe ne correspondent pas. Rééseyez.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour</a></div>';
         exit(); 
-    } 
+    }
 
     // Vérifier si l'utilisateur existe déjà en base de données
     $stmt = mysqli_prepare($conn, "SELECT COUNT(*) FROM users WHERE email = ?");
@@ -35,12 +35,12 @@
         echo '<div><h2>Un compte existe déjà à l\'adresse ' . $email . '</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Mot de passe oublié</a></div>';
     } else {
         if ($additionalInput === "2023$1582") {
-            // L'utilisateur a entré le bon code de restaurant, attribuer les droits d'administration
             $is_admin = 1;
         } else {
-            // L'utilisateur n'a pas entré le bon code de restaurant, pas de droits d'administration
             $is_admin = 0;
-        }
+            echo '<div><h2>Vous avez saisie un mauvais code restaurant </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer </a></div>';
+            exit();
+
         }
 
         // Requête SQL pour insérer un nouvel utilisateur dans la base de données
@@ -55,17 +55,19 @@
             $_SESSION['user_allergy'] = $allergy;
 
             if ($is_admin == 1) {
-                // Rediriger l'administrateur vers index.php avec le paramètre "role=admin"
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateur.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Connecter vous une fois sur la page d\'acceuil</a> </a></div>';
                 header('Location: index.php?role=admin');
                 exit();
             } else {
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page d\'accueil </a></div>';
                 header('Location: index.php?role=user');
             }
         } else {
             // L'inscription a échoué, afficher un message d'erreur
             echo "Erreur : " . mysqli_error($conn);
         }
-    
+    }
     $conn->close();
+
     ?>
 </body>

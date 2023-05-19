@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $escapedImagePath = $conn->real_escape_string($destination);
         $escapedCaption = $conn->real_escape_string($new_caption);
         $escapedImageName = $conn->real_escape_string($new_image_name);
-
+        $escapedImageID = $conn->real_escape_string($image_id);
         $sql = "INSERT INTO images (image_data, caption, image_name) VALUES ('$escapedImagePath', '$escapedCaption', '$escapedImageName')";
 
         if ($conn->query($sql) === TRUE) {
@@ -41,11 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Erreur lors de la sauvegarde de l'image.";
             exit();
         }
-
-        $escapedImagePath = $conn->real_escape_string($destination);
-        $escapedCaption = $conn->real_escape_string($new_caption);
-        $escapedImageName = $conn->real_escape_string($new_image_name);
-        $escapedImageID = $conn->real_escape_string($image_id);
 
         $sql = "UPDATE images SET image_data = '$escapedImagePath', caption = '$escapedCaption', image_name = '$escapedImageName' WHERE id = '$escapedImageID'";
 

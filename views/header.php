@@ -1,4 +1,3 @@
-
 <div class="wrapper">
   <div class="text-about col-md-8 rounded">
     <h1 class="title">Bienvenue 

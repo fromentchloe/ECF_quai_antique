@@ -33,7 +33,6 @@
             <label for="additional-input">Code restaurant :</label>
               <input type="password" id="additional-input" name="additionalInput">
               <a class="contact-link btn" href="admin_signup.php" id="signup-button">Ajoutez un administrateur 
-
               </a>
           </div>
           <div id="customer_view">

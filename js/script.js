@@ -1,11 +1,4 @@
 $(document).ready(function() {
-  // Gestion du menu burger
-  $('.navbar-nav').on('click', function() {
-    if($('.navbar-collapse').hasClass('show')) {
-      $('.navbar-collapse').removeClass('show');
-    }
-  });
-  
   // Transparence de la navbar au scroll
   $(document).scroll(function () {
     if($(window).scrollTop() > 20) {
@@ -144,14 +137,8 @@ $("#signup-button").click(function(event) {
 function confirmDelete() {
   return confirm("Êtes-vous sûr de vouloir supprimer cette image ?");
 }
-var rainImages = $(".rain-image");
 
-// Parcours toutes les images de pluie
-rainImages.each(function(index, image) {
-  // Génère une position horizontale aléatoire pour chaque image
-  var randomX = Math.floor(Math.random() * $(window).width()) + "px";
-  $(image).css("left", randomX);
-});
+
 });
 
 });

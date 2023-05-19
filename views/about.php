@@ -1,4 +1,4 @@
-<div class="container-fluid" id="about">
+<div class="container" id="about">
   <div class="row align-items-center">
     <div class="col-sm-4 d-flex">
       <div class="gallery-item align-self-center">

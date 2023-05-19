@@ -16,10 +16,9 @@
 .navbar {
   background-color: #7f5539;
   font-family: "Playfair Display", serif;
-  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 20%;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
@@ -152,6 +151,7 @@ p {
 }
 
 .schedule_group {
+  padding: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #e6ccb2;
@@ -274,8 +274,12 @@ footer a:hover {
   color: #7f5539;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1076px) {
+@media screen and (min-width: 771px) and (max-width: 956px) {
+  .navbar {
+    height: 10%;
+  }
   .navbar-collapse {
+    background-color: #7f5539;
     display: block;
     /* Masquer le logo de l'entreprise */
   }
@@ -286,12 +290,13 @@ footer a:hover {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-  .contact {
-    margin-left: 25%;
-  }
+@media (max-width: 771px) {
   footer ul li i {
     margin-right: 10px;
+  }
+  .navbar-collapse {
+    background-color: #7f5539;
+    border-radius: 10%;
   }
   .text-about {
     width: 100%;
@@ -303,9 +308,18 @@ footer a:hover {
   .cart {
     margin-left: 10px;
   }
-  .contact-link {
-    padding: 0;
-    margin: 0;
+  .navbar {
+    color: #e6ccb2;
+    height: 10%;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .gallery-item {
+    width: auto;
+  }
+  .menu {
+    font-size: 30px;
   }
 }
 body {
