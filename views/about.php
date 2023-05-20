@@ -1,11 +1,14 @@
 <div class="container" id="about">
-  <div class="row align-items-center">
-    <div class="col-sm-4 d-flex">
-      <div class="gallery-item align-self-center">
-        <img class="right-to-left p-5 rounded-circle" src="./image/chef.png" width="500" alt="Chef Arnaud Michant">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="gallery-item ">
+        <img class="right-to-left p-5 rounded" src="./image/chef.png" width="500" alt="Chef Arnaud Michant">
+        <h3 class="left-to-right title" >Chef Michant <br>& <br> son équipe </h3>
+        <img class="right-to-left p-5 rounded" src="./image/chef_cuisine.png" width="500" alt="Chef Arnaud Michant">
+
       </div>
     </div>
-    <div class="col-sm-8">
+    <div class="col-lg-8">
       <h3 class="left-to-right title p-5" >Le Restaurant  </h3>
       <p class="about_text">Pour son troisième restaurant de burger, le chef Michant a choisi de s'implanter au cœur de Chambéry, 
       dans un quartier animé et dynamique de la ville. Il a voulu créer un lieu convivial où les clients 
@@ -24,10 +27,11 @@
       les amateurs de burgers qui cherchent une expérience culinaire de qualité dans une atmosphère chaleureuse 
       et conviviale.</p>
       <hr class="custom-hr">
+      <h3 class="left-to-right loc" >Vous acceuille au coeur de <br><i class="bi bi-geo-alt"></i> Chambéry </h3>
     </div>
+    
   </div>
 </div>
-<hr>
 
 
 

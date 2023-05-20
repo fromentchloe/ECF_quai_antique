@@ -4,3 +4,11 @@
 p {
     @include text_body;
 }
+
+.loc {
+    text-shadow: 1px 1px 1px $nude, 0 0 1em $nude, 0 0 0.2em $mid_nude;
+    color: transparent;
+    font-family: $text_headline;
+    font-size: 2em;
+    margin-top: 10%;
+}

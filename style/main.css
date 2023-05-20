@@ -138,7 +138,7 @@ input[type=text], input[type=date], input[type=number], input[type=email], input
 }
 
 .about_title {
-  text-shadow: 1px 1px 1.5px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
+  text-shadow: 1px 1px 1px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
   color: transparent;
   font-family: "Playfair Display", serif;
   font-size: 3em;
@@ -150,6 +150,14 @@ p {
   color: #e6ccb2;
 }
 
+.loc {
+  text-shadow: 1px 1px 1px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
+  color: transparent;
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  margin-top: 10%;
+}
+
 .schedule_group {
   padding: 0;
   text-align: center;
@@ -157,7 +165,7 @@ p {
   color: #e6ccb2;
 }
 .schedule_group .schedule_title {
-  text-shadow: 1px 1px 1.5px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
+  text-shadow: 1px 1px 1px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
   color: transparent;
   font-family: "Playfair Display", serif;
   font-size: 3em;
@@ -176,7 +184,7 @@ p {
 }
 
 .title {
-  text-shadow: 1px 1px 1.5px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
+  text-shadow: 1px 1px 1px #e6ccb2, 0 0 1em #e6ccb2, 0 0 0.2em #b08968;
   color: transparent;
   font-family: "Playfair Display", serif;
   font-size: 3em;

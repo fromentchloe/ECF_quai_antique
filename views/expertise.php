@@ -52,7 +52,7 @@ Notre équipe dynamique mettra tout en œuvre pour vous offrir un service amical
     <div class="col-md-6  text-center left-to-right">
     <h4 class=" text_body p-4" style="text-decoration: overline;">Nos produits </h4>
       <p>Nos cuisiniers à on coeur de travailler Avec des ingrédients locaux de qualité, comme des fromages délicieux, des viandes savoureuses et des légumes frais, ils créent des burgers uniques qui ravissent les papilles.</p>
-      <img width="200" height="150" src="./image/chef_cuistot.png" class="rounded-circle m-2">
+      <img width="200" height="150" src="./image/produit.png" class="rounded-circle m-2">
     </div>
     </div>
 

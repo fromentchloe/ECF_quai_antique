@@ -22,13 +22,13 @@
           <label for="time" required>Heure :</label>
           <select id="time" name="time">
             <optgroup label="Midi">
-              <option value="13:00">13:00</option>
-              <option value="13:15">13:15</option>
-              <option value="13:30">13:30</option>
-              <option value="13:45">13:45</option>
-              <option value="14:00">14:00</option>
-              <option value="14:15">14:15</option>
-              <option value="14:30">14:30</option>
+              <option value="13:00">12:00</option>
+              <option value="13:15">12:15</option>
+              <option value="13:30">12:30</option>
+              <option value="13:45">12:45</option>
+              <option value="14:00">13:00</option>
+              <option value="14:15">13:15</option>
+              <option value="14:30">13:30</option>
             </optgroup>
             <optgroup label="Soir">
               <option value="19:00">19:00</option>
@@ -38,6 +38,7 @@
               <option value="20:00">20:00</option>
               <option value="20:15">20:15</option>
               <option value="20:30">20:30</option>
+              <option value="20:30">21:00</option>
             </optgroup>
           </select><br><br>
           <label for="numPeople">Nombre de personnes :</label>
@@ -47,7 +48,7 @@
           <?php
           $user_allergy = isset($_SESSION['user_allergy']) ? htmlspecialchars($_SESSION['user_allergy']) : '';
           ?>
-          <input type="text" id="allergy" name="allergy" value="<?php echo $user_allergy; ?>">
+          <input type="text" id="allergy" name="allergy" placeholder="Arachine, Gluten, Oignon, Tomates..." value="<?php echo $user_allergy; ?>">
           <br><br>
           <div class="d-flex justify-content-between align-items-center">
           <input class="contact-link btn" type="submit" value="Réserver">
