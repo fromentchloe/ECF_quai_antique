@@ -51,7 +51,7 @@
         } else {        
     ?>
             <a class="contactbtn p-2  rounded" id="login-button">
-                <button type="button" class="btn" id="open-login-modal" >Se connecter</button>
+                <button type="button" class="btn" id="open-login-modal" >Se connecter / s'inscrire</button>
             </a>
             <?php
             }

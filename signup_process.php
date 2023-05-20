@@ -16,6 +16,7 @@
     $password_hash = password_hash($password, PASSWORD_ARGON2I); // Hasher le mot de passe
     $retype_password = mysqli_real_escape_string($conn, $_POST['retype_password']);
     $additionalInput = mysqli_real_escape_string($conn, $_POST['additionalInput']);
+    $allergy = mysqli_real_escape_string($conn, $_POST['allergy']);
         
     // Vérification que les deux mots de passe sont identiques
     if ($password != $retype_password) {
@@ -36,12 +37,10 @@
     } else {
         if ($additionalInput === "2023$1582") {
             $is_admin = 1;
-        } else {
-            $is_admin = 0;
             echo '<div><h2>Vous avez saisie un mauvais code restaurant </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer </a></div>';
-            exit();
-
-        }
+        } else {
+        $is_admin = 0;}
+       
 
         // Requête SQL pour insérer un nouvel utilisateur dans la base de données
         $stmt = mysqli_prepare($conn, "INSERT INTO users (name, email, password, is_admin, allergy) VALUES (?, ?, ?, ?, ?)");
@@ -66,8 +65,7 @@
             // L'inscription a échoué, afficher un message d'erreur
             echo "Erreur : " . mysqli_error($conn);
         }
-    }
     $conn->close();
-
+    }
     ?>
 </body>
