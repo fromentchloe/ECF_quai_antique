@@ -8,7 +8,7 @@
                     <hr class="custom_hr float-left">
                         <div class="gallery-item right-to-left rounded">
                         
-                            <img class="m-2"src="./image/bar.png" width="200" alt="Notre bar">
+                            <img class="m-2"src="./image/bar.png" width="160" alt="Notre bar">
                             <div style='font-size: 40%' class="caption mt-2">Notre Bar</div>
                         </div>
                     </div>
@@ -16,7 +16,7 @@
                     
                     <div class="col-md-3"><hr class="custom_hr float-right">
                         <div class="gallery-item left-to-right rounded">
-                            <img class="m-2"src="./image/exterieur.png" width="200" alt="Vue de l'extérieur">
+                            <img class="m-2"src="./image/exterieur.png" width="160" alt="Vue de l'extérieur">
                             <div style='font-size: 40%' class="caption mt-2">Vue de l'extérieur</div>
                            
                         </div>

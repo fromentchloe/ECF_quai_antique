@@ -8,13 +8,14 @@
       <div class="modal-body">
         <form method="POST" action="login_process.php">
           <h3  class="modal-title" id="login-modal-label">Se connecter</h3>
+          
           <label for="login-email">Email :</label>
           <input type="email" id="login-email" name="email" required><br><br>
 
-
-          
           <label for="password">Mot de passe :</label>
           <input type="password" id="password" name="password" required><br><br>
+          <a href="forget_psw.php">Mot de passe oublié ? </a>
+
           <div class="d-flex justify-content-between align-items-center">
           <input class="contact-link btn" type="submit" value="Se connecter"></input>
           <button class=" contact-link btn" id="signup-link" type="button">s'inscrire</button>

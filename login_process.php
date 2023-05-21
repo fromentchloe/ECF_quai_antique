@@ -11,7 +11,7 @@
     
     // Requête SQL pour récupérer les informations de l'utilisateur
     $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query( $sql);
 
     // Vérifier si l'utilisateur existe et si les informations de connexion sont correctes
     if (mysqli_num_rows($result) == 1) {
@@ -39,7 +39,7 @@
                 exit();
             }
         } else {
-            // Les informations de connexion sont incorrectes, afficher un message d'erreur
+            
             echo '<div><h2>Mot de passe incorrect</h2><br><a class="error-message" href="javascript:history.go(-1)">Recommencer avec un mot de passe valide</a></div>';
         }
     } else {

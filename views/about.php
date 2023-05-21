@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-lg-4">
       <div class="gallery-item ">
-        <img class="right-to-left p-5 rounded" src="./image/chef.png" width="500" alt="Chef Arnaud Michant">
+        <img class="right-to-left p-5 rounded" src="./image/chef.png"  alt="Chef Arnaud Michant">
         <h3 class="left-to-right title" >Chef Michant <br>& <br> son équipe </h3>
-        <img class="right-to-left p-5 rounded" src="./image/chef_cuisine.png" width="500" alt="Chef Arnaud Michant">
+        <img class="right-to-left p-5 rounded" src="./image/chef_cuisine.png" alt="Chef Sylvain Brichant">
 
       </div>
     </div>
