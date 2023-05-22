@@ -16,7 +16,8 @@
     $password_hash = password_hash($password, PASSWORD_ARGON2I); // Hasher le mot de passe
     $retype_password = mysqli_real_escape_string($conn, $_POST['retype_password']);
     $additionalInput = mysqli_real_escape_string($conn, $_POST['additionalInput']);
-    $allergy = mysqli_real_escape_string($conn, $_POST['allergy']);
+    $allergy = "";
+    
         
     // Vérification que les deux mots de passe sont identiques
     if ($password != $retype_password) {
@@ -33,13 +34,18 @@
     mysqli_stmt_close($stmt);
 
     if ($count > 0) {
-        echo '<div><h2>Un compte existe déjà à l\'adresse ' . $email . '</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Mot de passe oublié</a></div>';
-    } else {
-        if ($additionalInput === "2023$1582") {
+        echo '<div><h2>Un compte existe déjà à l\'adresse ' . $email . '</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Selectionnez mot de passe oublier</a></div>';
+    } 
+    if ($additionalInput === "2023$1582") {
             $is_admin = 1;
-            echo '<div><h2>Vous avez saisie un mauvais code restaurant </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Recommencer </a></div>';
+           
         } else {
         $is_admin = 0;}
+
+    if ($is_admin == 0) {
+        $allergy = mysqli_real_escape_string($conn, $_POST['allergy']);
+    }
+    
        
 
         // Requête SQL pour insérer un nouvel utilisateur dans la base de données
@@ -47,25 +53,24 @@
         mysqli_stmt_bind_param($stmt, "sssis", $name, $email, $password_hash, $is_admin, $allergy);
         if (mysqli_stmt_execute($stmt)) {
             // L'inscription a réussi, stocker les informations de l'utilisateur dans la session
-            session_start();
+    
             $_SESSION['user_name'] = $name;
             $_SESSION['user_email'] = $email;
             $_SESSION['user_is_admin'] = $is_admin;
             $_SESSION['user_allergy'] = $allergy;
 
             if ($is_admin == 1) {
-                echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateur.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Connecter vous une fois sur la page d\'acceuil</a> </a></div>';
-                header('Location: index.php?role=admin');
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateur.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Connecter vous une fois sur la page d\'acceuil</a> </a></div>';
                 exit();
             } else {
                 echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page d\'accueil </a></div>';
-                header('Location: index.php?role=user');
+                exit();
             }
         } else {
             // L'inscription a échoué, afficher un message d'erreur
             echo "Erreur : " . mysqli_error($conn);
         }
     $conn->close();
-    }
+    
     ?>
 </body>

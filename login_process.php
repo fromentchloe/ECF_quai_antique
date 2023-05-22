@@ -11,7 +11,7 @@
     
     // Requête SQL pour récupérer les informations de l'utilisateur
     $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = mysqli_query( $sql);
+    $result = mysqli_query( $conn, $sql);
 
     // Vérifier si l'utilisateur existe et si les informations de connexion sont correctes
     if (mysqli_num_rows($result) == 1) {

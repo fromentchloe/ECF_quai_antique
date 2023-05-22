@@ -40,9 +40,9 @@
           
           <label for="signup-name">Nom :</label>
             <input type="text" id="signup-name" placeholder="Quai Antique" name="name" required>
-
+            <span style="color:red; font-size: 0.7em;"> Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre majuscule, et un chiffre.</span>
           <label for="signup-password">Mot de passe :</label>
-            <input type="password" id="signup-password" name="password" required>
+            <input type="password" id="signup-password" name="password" required pattern="(?=.*\d)(?=.*[A-Z]).{8,}">
 
           <label for="retype_password">Re-tapez votre Mot de passe : </label>
             <input type="password" id="retype_password" name="retype_password" required>
@@ -50,6 +50,7 @@
           <label for="allergy">Allergies (optionnel) :</label>
             <textarea id="allergy" placeholder="Arachine, Gluten, Oignon, Tomates..."name="allergy"></textarea>
             <div class="d-flex justify-content-center align-items-center">
+              
           <input class="contact-link btn" type="submit" value="S'enregistrer"></div>
 
           </div>
