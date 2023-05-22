@@ -23,6 +23,9 @@
       "files": [
         "index.php"
       ]
+    },
+    "scripts": {
+      "postinstall": "cd js && cp script.js ../public"
     }
   }
   

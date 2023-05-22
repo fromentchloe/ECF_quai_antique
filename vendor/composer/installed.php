@@ -3,7 +3,7 @@
         'name' => 'vendor/quaiantiquerestaurant',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '85e70a9accd86f4639fc88a944b39db503793e5f',
+        'reference' => 'ea16387d07598601678a2466ad449ab005712e49',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'vendor/quaiantiquerestaurant' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '85e70a9accd86f4639fc88a944b39db503793e5f',
+            'reference' => 'ea16387d07598601678a2466ad449ab005712e49',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
