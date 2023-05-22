@@ -1,0 +1,28 @@
+{
+    "name": "quaiantiquerestaurant",
+    "description": "Projet Le Quai Antique",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "froment chloe",
+        "email": "fromentchloe.web@gmail.com"
+      }
+    ],
+    "require": {
+      "php": "^7.4",
+      "ext-mysqli": "*",
+      "jquery": "^3.6"
+    },
+    "autoload": {
+      "psr-4": {
+        "App\\": "src/"
+      }
+    },
+    "extra": {
+      "files": [
+        "about.php"
+      ]
+    }
+  }
+  
