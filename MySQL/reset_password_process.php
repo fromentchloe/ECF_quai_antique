@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-require_once '../MySQL/connection_bdd.php';
+require "./connection_bdd.php";
 
 // Vérification de la méthode de requête
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
     // Méthode de requête invalide, redirigez vers la page d'accueil ou une autre page appropriée
-    header('Location: ./index.php');
+    header('Location: ../index.php');
     exit();
 }
 ?>

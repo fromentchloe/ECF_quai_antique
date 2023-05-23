@@ -1,5 +1,5 @@
 <body style="text-align: center; background-color: #e6ccb2; color: #7f5539;">
-    <a href="./index.php"><img src="./image/Logo.png"></a>
+    <a href="../index.php"><img src="../image/Logo.png"></a>
     <?php
     // if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on'){
     //  header('Location: https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
@@ -7,7 +7,7 @@
     //}
     
     // Connexion à la base de données
-    require_once './MySQL/connection_bdd.php';
+    require "./connection_bdd.php";
 
     // Récupération des informations du formulaire et nettoyage des données
     $name = trim(htmlspecialchars(mysqli_real_escape_string($conn, $_POST['name'])));
@@ -35,6 +35,7 @@
 
     if ($count > 0) {
         echo '<div><h2>Un compte existe déjà à l\'adresse ' . $email . '</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Selectionnez mot de passe oublier</a></div>';
+        exit();
     } 
     if ($additionalInput === "2023$1582") {
             $is_admin = 1;
@@ -60,10 +61,10 @@
             $_SESSION['user_allergy'] = $allergy;
 
             if ($is_admin == 1) {
-                echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateur.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Connecter vous une fois sur la page d\'acceuil</a> </a></div>';
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateurs <br><br>Retournez a la page d\'acceuil et connectez-vous </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Accueil </a></div>';
                 exit();
             } else {
-                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Page d\'accueil </a></div>';
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients <br><br> Retournez a la page d\'acceuil et connectez-vous </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Accueil </a></div>';
                 exit();
             }
         } else {

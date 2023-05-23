@@ -1,8 +1,8 @@
 <body style="text-align: center; background-color: #e6ccb2; color: #7f5539; text-align: center"> 
-    <a href="./index.php"><img src="./image/Logo.png"></a>
+    <a href="../index.php"><img src="../image/Logo.png"></a>
     <?php
     // Connexion à la base de données
-    require_once 'MySQL/connection_bdd.php';
+    require "./connection_bdd.php";
 
     // Récupérer les informations du formulaire de connexion
     $email = filter_var(mysqli_real_escape_string($conn, $_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -18,13 +18,8 @@
         $user = mysqli_fetch_assoc($result);
         if (password_verify($password, $user['password'])) {
             // Les informations de connexion sont correctes, connecter l'utilisateur
+            
             session_start();
-            
-            // Supprimer le cookie de session en définissant une date d'expiration dans le passé
-            if (isset($_COOKIE['session'])) {
-                setcookie('session', '', time() - 3600, '/');
-            }
-            
             $_SESSION['user_name'] = $user['name'];
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
@@ -32,10 +27,10 @@
 
             // Redirection en fonction du rôle
             if ($user['is_admin'] == 1) {
-                header('Location: index.php?role=admin'); // Rediriger l'administrateur vers la page d'accueil avec le rôle admin
+                header('Location: ../index.php?role=admin'); // Rediriger l'administrateur vers la page d'accueil avec le rôle admin
                 exit();
             } else {
-                header('Location: index.php?role=user'); // Rediriger l'utilisateur vers la page d'accueil avec le rôle user
+                header('Location: ../index.php?role=user'); // Rediriger l'utilisateur vers la page d'accueil avec le rôle user
                 exit();
             }
         } else {

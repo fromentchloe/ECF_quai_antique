@@ -1,5 +1,5 @@
 <?php
-require_once 'MySQL/connection_bdd.php';
+  require "./connection_bdd.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $image_id = $_POST['image_id'];
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($image_id)) {
         // Ajouter une nouvelle image
-        $destination = './image/' . $new_image_name;
+        $destination = '../image/' . $new_image_name;
         if (!move_uploaded_file($new_image_path, $destination)) {
             echo "Erreur lors de la sauvegarde de l'image.";
             exit();
@@ -29,14 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($conn->query($sql) === TRUE) {
             // Insertion réussie
-            header('location: index.php');
+            header('location: ../index.php');
         } else {
             // Erreur lors de l'insertion
             echo "Erreur lors de l'ajout de l'image en base de données : " . $conn->error;
         }
     } else {
         // Mettre à jour une image existante
-        $destination = './image/' . $new_image_name;
+        $destination = '../image/' . $new_image_name;
         if (!move_uploaded_file($new_image_path, $destination)) {
             echo "Erreur lors de la sauvegarde de l'image.";
             exit();
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($conn->query($sql) === TRUE) {
             // Mise à jour réussie
-            header('location: index.php');
+            header('location: ../index.php');
         } else {
             // Erreur lors de la mise à jour
             echo "Erreur lors de la mise à jour de l'image en base de données : " . $conn->error;

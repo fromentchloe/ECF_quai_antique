@@ -1,5 +1,5 @@
 <?php
-require_once '../MySQL/connection_bdd.php';
+ require "./connection_bdd.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération de l'adresse e-mail depuis le formulaire
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Erreur lors de l'envoi de l'e-mail.";
         }
 
-        header('Location: ./reset_password_confirmation.php');
+        header('Location: ../views/reset_password_confirmation.html');
         exit();
     }
 }

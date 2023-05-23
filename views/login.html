@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" id="close"></button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="login_process.php">
+        <form method="POST" action="./MySQL/login_process.php">
           <h3  class="modal-title" id="login-modal-label">Se connecter</h3>
           
           <label for="login-email">Email :</label>
@@ -14,7 +14,7 @@
 
           <label for="password">Mot de passe :</label>
           <input type="password" id="password" name="password" required><br><br>
-          <a href="forget_psw.php">Mot de passe oublié ? </a>
+          <a href="./views/forget_psw.html">Mot de passe oublié ? </a>
 
           <div class="d-flex justify-content-between align-items-center">
           <input class="contact-link btn" type="submit" value="Se connecter"></input>
@@ -23,7 +23,7 @@
           
         </form><hr>
         <div id="signup-content" style="display: none;">
-        <form class="signup-form" action="signup_process.php" method="POST">
+        <form class="signup-form" action="./MySQL/signup_process.php" method="POST">
          
         <h3  class="modal-title">Inscription</h3>
         
@@ -33,7 +33,7 @@
           <div id="additional-field" style="display: none;" >
             <label for="additional-input">Code restaurant :</label>
               <input type="password" id="additional-input" name="additionalInput">
-              <a class="contact-link btn" href="admin_signup.php" id="signup-button">Ajoutez un administrateur 
+              <a class="contact-link btn" href="./views/admin_signup.html" id="signup-button">Ajoutez un administrateur 
               </a>
           </div>
           <div id="customer_view">

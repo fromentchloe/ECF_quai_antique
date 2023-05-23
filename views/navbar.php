@@ -44,7 +44,7 @@
  
         if (isset($_SESSION['user_name'])) {
     ?>
-            <a class="contactbtn p-2 m-2 rounded" href="logout.php">
+            <a class="contactbtn p-2 m-2 rounded" href="./MySQL/logout.php">
                 <button type="button" class="btn">Déconnexion</button>
             </a>
     <?php
@@ -61,7 +61,7 @@
                     <button type="button" class="btn" id="open-reservation-modal">Réserver</button>
                 </a>
     
-    <?php include "reservation.php"; include "login.php";?>
+    <?php include "reservation.php"; include "login.html";?>
 </div>
 </div>
     

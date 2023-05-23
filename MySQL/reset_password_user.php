@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-require_once '../MySQL/connection_bdd.php';
+require "./connection_bdd.php";
 
 // Vérification des paramètres de l'URL
 if (isset($_GET['email']) && isset($_GET['token'])) {
@@ -30,7 +30,7 @@ if (isset($_GET['email']) && isset($_GET['token'])) {
     }
 } else {
     // Paramètres manquants, redirigez vers la page de demande de réinitialisation du mot de passe
-    header('Location: ./forget_psw.php');
+    header('Location: ./views/forget_psw.php');
     exit();
 }
 ?>

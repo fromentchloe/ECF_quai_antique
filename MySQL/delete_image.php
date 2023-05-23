@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inclure le fichier de connexion à la base de données
-    require_once 'MySQL/connection_bdd.php';
+    require "./connection_bdd.php";
 
     // Vérifier si l'ID de l'image à supprimer a été passé en tant que champ caché
     if (isset($_POST["image_id"])) {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("i", $imageId);
             $stmt->execute();
             $stmt->close();
-            header('location: index.php');
+            header('location: ../index.php');
         } else {
             echo "L'image n'a pas été trouvée dans la base de données.";
             
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fermer la connexion à la base de données
     $conn->close();
 } else {
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 $conn->close();
 ?>

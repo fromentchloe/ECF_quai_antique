@@ -16,18 +16,14 @@
   <body>
 
       <header>
-        <?php session_start();
-         if (isset($_COOKIE['session'])) {
-                setcookie('session', '', time() - 3600, '/');
-            }
-            ?>
+        <?php session_start();?>
         <?php require 'views/navbar.php'; ?>
-        <?php include 'views/header.php'; ?>
+        <?php require 'views/header.php'; ?>
       </header>
       <main>
         <article>
         <section>
-            <?php require 'views/about.php'; ?>
+            <?php require 'views/about.html'; ?>
           
           </section>
           <section>
@@ -35,13 +31,13 @@
           </section>
           <section>
             <?php require 'views/gallery.php'; ?>
-            <?php include "views/expertise.php"; ?>
+            <?php include "views/expertise.html"; ?>
           </section>
         </article>
       </main>
       <footer>
-        <?php include "views/footer.php"; ?>
-        <?php $conn->close(); ?>
+        <?php include "views/footer.html"; ?>
+       
 
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
