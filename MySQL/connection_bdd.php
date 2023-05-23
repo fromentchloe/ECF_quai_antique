@@ -23,14 +23,4 @@ if (getenv('JAWSDB_URL') !== false) {
         die("Connection failed: " . mysqli_connect_error());
     }
 }
-
-$sqlFile = "../quaiantique.sql";
-
-$sqlContent = file_get_contents($sqlFile);
-
-if (mysqli_multi_query($conn, $sqlContent)) {
-    echo "Le fichier SQL a été exécuté avec succès.";
-} else {
-    echo "Erreur lors de l'exécution du fichier SQL : " . mysqli_error($conn);
-}
 ?>
