@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (getenv('JAWSDB_URL') !== false) {
     $url = getenv('JAWSDB_URL');
     $dbparts = parse_url($url);
@@ -24,4 +24,13 @@ if (getenv('JAWSDB_URL') !== false) {
     }
 }
 
+$sqlFile = "../quaiantique.sql";
+
+$sqlContent = file_get_contents($sqlFile);
+
+if (mysqli_multi_query($conn, $sqlContent)) {
+    echo "Le fichier SQL a été exécuté avec succès.";
+} else {
+    echo "Erreur lors de l'exécution du fichier SQL : " . mysqli_error($conn);
+}
 ?>
