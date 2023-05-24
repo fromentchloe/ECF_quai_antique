@@ -11,6 +11,17 @@
             <h2 class="m-5 " >Nos formules<br></h2>
             <div class="col-sm-6 ">
                 <h3 class="m-5 time">Midi</h3>
+                
+                <?php if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] !== '1') { ?>
+                    <form>
+                        <label for="noon"> Modifier la formule du midi </label>
+                        <input type="text" value="Entrée">
+                    </form>
+                  <?php } ?>
+        
+                
+                
+        
                 <div class="content">
                     Burger du jour + boisson + dessert du jour <br><br> Prix : 18€
                 </div>
