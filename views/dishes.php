@@ -5,34 +5,217 @@
     </div>
 </div>
 <!--les formules-->
-<section class="group-dishes " >
-    <div class="container"><hr>
+<section class="group-dishes">
+    <div class="container">
+        <hr>
         <div class="row col-sm-12 formule" id="formulas">
-            <h2 class="m-5 " >Nos formules<br></h2>
-            <div class="col-sm-6 ">
-                <h3 class="m-5 time">Midi</h3>
-                
-                <?php if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] !== '1') { ?>
-                    <form>
-                        <label for="noon"> Modifier la formule du midi </label>
-                        <input type="text" value="Entrée">
+            <h2 class="m-5">Nos formules<br></h2>
+            <?php
+            if (isset($_SESSION['user_is_admin']) && $_SESSION['user_is_admin'] === '1') { ?>
+             <div class="col-sm-6">
+                    <form action="change_dishes.php">
+                        <label class="content" for="noon">Modifier la formule midi :</label>
+                        <input class="" type="text" value="Entrée">
+                        <input class="" type="text" value="plats">
+                        <input class="" type="text" value="dessert">
+                        <button class="contact-link btn" type="submit">Enregistrer</button>
                     </form>
-                  <?php } ?>
-        
-                
-                
-        
-                <div class="content">
-                    Burger du jour + boisson + dessert du jour <br><br> Prix : 18€
                 </div>
-            </div>
-            <div class="col-sm-6 ">
-                <h3 class="m-5 time">Soir</h3>
-                <div class="content">
-                    Entrée (salade savoyarde ou soupe du jour) + Burger de votre choix + boisson + dessert du jour.<br><br> Prix : 25€.
+                <div class="col-sm-6">
+                    <form action="change_dishes">
+                        <label class="content" for="evening">Modifier la formule soir :</label>
+                        <input type="text" value="Entrée">
+                        <input type="text" value="plats">
+                        <input type="text" value="dessert">
+                        <button class="contact-link btn" type="submit">Enregistrer</button>
+                    </form>
                 </div>
-            </div>
-<!--A la carte Entrée -->   
+                <div class="row col-sm-12">
+                    <h2 class="m-5" id="carte">A la carte</h2>
+                </div>
+                <div class="col-sm-9">
+                    <h3 class=" ">Entrée</h3></div>
+                    <div class="col-sm-2">
+                    <h3 class="">Prix</h3></div>
+            
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row col-sm-12">
+                    
+                </div>
+                <div class="col-sm-9">
+                    <h3 class=" ">Burger</h3></div>
+                    <div class="col-sm-2">
+                    <h3 class="">Prix</h3></div>
+            
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" value="€" class="form-control" />
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                        </div>
+                    </div>
+                    <hr>                    
+                    <div class="row col-sm-12">
+                    
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class=" ">Dessert</h3></div>
+                        <div class="col-sm-2">
+                        <h3 class="">Prix</h3></div>
+                
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="text" value="€" class="form-control" />
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="text" value="€" class="form-control" />
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="text" value="€" class="form-control" />
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="text" value="€" class="form-control" />
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn " type="submit" style="font-size: 1.5em"><i class="bi bi-check2"></i></button>
+                            </div>
+                        </div>
+                        <hr></div>
+    </div>
+            <?php } else { ?>
+                <div class="col-sm-6">
+                    <h3 class="m-5 time">Midi</h3>
+                    <div class="content">
+                        Burger du jour + boisson + dessert du jour<br><br> Prix : 18€
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="m-5 time">Soir</h3>
+                    <div class="content">
+                        Entrée (salade savoyarde ou soupe du jour) + Burger de votre choix + boisson + dessert du jour.<br><br> Prix : 25€.
+                    </div>
+                    
+                </div>
+           
+<!--A la carte -->   
         <div class="row col-sm-12">
             <h2 class="m-5" id="carte">A la carte</h2>
             <h3 class="m-5 time">Entrée</h3>
@@ -151,5 +334,8 @@
             <div class="col-sm-1 ">5,50 €</div>
             <div class="col-sm-1 ">10 €</div>
             <div class="col-sm-2  ">14.50 € </div>
+            </div>
         </div>
+        <?php } ?>  
+    </div>
 </section>
