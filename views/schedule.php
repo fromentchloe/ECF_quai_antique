@@ -9,7 +9,7 @@
         <h4 class="title mt-5">Horaires d'ouverture</h4>
         <i class="bi bi-clock" style="font-size: 3em;"></i><br>
         <?php
-        echo 'Semaine du ' . date('d/m/Y') . ' au ' . date('d/m/Y', strtotime('+7 days')) . '<br>';
+       echo 'Semaine du '. date('d/m/Y', strtotime('monday this week')) . ' au ' . date('d/m/Y', strtotime('sunday this week')) . '<br><br>';
         ?>
         <?php 
         $days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
@@ -31,8 +31,7 @@
           $label = ucfirst($day);
           $value = $row[$day];
         ?>
-        <p style="color: gray;"><?php echo $label; ?>:</p>
-        <p><?php echo $value; ?></p>
+        <p><?php echo '<span style="font-weight:bold;">' . $label . '</span>: ' . $value; ?></p>
         <?php } ?>
       </div>
     <?php } else { ?>
@@ -41,7 +40,7 @@
         <h4 class="title mt-5">Horaires d'ouverture</h4>
         <i class="bi bi-clock" style="font-size: 3em;"></i><br>
         <?php
-        echo 'Semaine du ' . date('d/m/Y') . ' au ' . date('d/m/Y', strtotime('+7 days')) . '<br>';
+     echo 'Semaine du '. date('d/m/Y', strtotime('monday this week')) . ' au ' . date('d/m/Y', strtotime('sunday this week')) . '<br><br>';
         ?>
         <form id="scheduleForm" action="./MySQL/change_schedule.php" method="POST">
           <?php
