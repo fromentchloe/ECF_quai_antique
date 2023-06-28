@@ -1,7 +1,9 @@
 //Responsive design
 //au dessus de 1076px  
 @media screen and (min-width: 956px) {
-    
+  .logo-2 {
+    display: none;
+  }
     
   }
   // de 771 a 956 
@@ -20,6 +22,9 @@
 
       .cart {
         width: 100%;
+      }
+      .logo-2 {
+        display: none;
       }
   }
     // en dessous de 771

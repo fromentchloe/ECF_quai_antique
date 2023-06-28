@@ -19,13 +19,13 @@
     $allergy = "";
     
         
-    // Vérification que les deux mots de passe sont identiques
+
     if ($password != $retype_password) {
         echo '<div><h2>Les deux mots de passe ne correspondent pas. Rééseyez.</h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Retour</a></div>';
         exit(); 
     }
 
-    // Vérifier si l'utilisateur existe déjà en base de données
+
     $stmt = mysqli_prepare($conn, "SELECT COUNT(*) FROM users WHERE email = ?");
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
@@ -64,7 +64,7 @@
                 echo '<div><h2>Nous sommes heureux de vous compter parmi nos collaborateurs <br><br>Retournez a la page d\'acceuil et connectez-vous </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Accueil </a></div>';
                 exit();
             } else {
-                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients <br><br> Retournez a la page d\'acceuil et connectez-vous </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-2)">Accueil </a></div>';
+                echo '<div><h2>Nous sommes heureux de vous compter parmi nos clients <br><br> Retournez a la page d\'acceuil et connectez-vous </h2><br><a style="background-color: #7f5539; color: #e6ccb2; border-radius: 20px; padding: 10px 20px; font-size: 25px; cursor: pointer; text-decoration:none" href="javascript:history.go(-1)">Accueil </a></div>';
                 exit();
             }
         } else {

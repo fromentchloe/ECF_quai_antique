@@ -16,7 +16,7 @@
           <input type="text" id="name" name="name" value="<?php echo $user_name; ?>" required>
           <br><br>
           <label for="selectedDate">Date :</label>
-          <input type="date" id="selectedDate" name="date" min="2023-05-01" max="2023-05-31" onchange="checkDate()" required>
+          <input type="date" id="selectedDate" name="date" onchange="checkDate()" required>
           <br><br>
           <p id="message"></p>
           <label for="time" required>Heure :</label>
@@ -50,7 +50,8 @@
           ?>
           <input type="text" id="allergy" name="allergy" placeholder="Arachine, Gluten, Oignon, Tomates..." value="<?php echo $user_allergy; ?>">
           <br><br>
-          <div class="d-flex justify-content-between align-items-center">
+          <a>créez un compte pour que vos prochaines réservations soit plus rapide ? </a>
+          <div class="d-flex justify-content-between align-items-center mt-5">
           <input class="contact-link btn" type="submit" value="Réserver">
           <button class="contact-link btn" id="cancel" type="button">Annuler</button>
           </div>

@@ -30,7 +30,7 @@
                 header('Location: ../index.php?role=admin'); // Rediriger l'administrateur vers la page d'accueil avec le rôle admin
                 exit();
             } else {
-                header('Location: ../index.php?role=user'); // Rediriger l'utilisateur vers la page d'accueil avec le rôle user
+                header('Location: ../index.php?role=user'); 
                 exit();
             }
         } else {
@@ -38,7 +38,7 @@
             echo '<div><h2>Mot de passe incorrect</h2><br><a class="error-message" href="javascript:history.go(-1)">Recommencer avec un mot de passe valide</a></div>';
         }
     } else {
-        // L'utilisateur n'existe pas, afficher un message d'erreur
+ 
         echo '<div><h2>Email incorrect</h2><br><a class="error-message" href="javascript:history.go(-1)">Recommencer avec un email valide</a></div>';
     }
 

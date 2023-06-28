@@ -12,7 +12,6 @@
     transform: rotate(360deg);
   }
 }
-/* Définir la couleur de fond de la barre de navigation */
 .navbar {
   background-color: #7f5539;
   font-family: "Playfair Display", serif;
@@ -28,14 +27,11 @@
   opacity: 0;
 }
 
-/* Définir le style du logo */
 .logo {
-  box-shadow: 10px 20px 50px black;
+  box-shadow: 10px 20px 50px rgb(255, 255, 255);
 }
 
-/* Définir le style de la barre de navigation */
 .navbar-collapse {
-  /* Définir la disposition de la barre de navigation */
   display: flex;
   justify-content: space-between;
 }
@@ -56,10 +52,8 @@
 }
 .dropdown-menu .dropdown-item:hover {
   color: #7f5539;
-  background-color: #e6ccb2;
 }
 
-/* Définir le style des liens de contact */
 .contact-link {
   color: #e6ccb2;
   background-color: #7f5539;
@@ -102,8 +96,7 @@
   font-family: "Playfair Display", serif;
 }
 .text-about .subtitle {
-  font-family: "Playfair Display", serif;
-  font-size: larger;
+  font-family: "Poppins", sans-serif;
 }
 
 form {
@@ -282,6 +275,11 @@ footer a:hover {
   color: #7f5539;
 }
 
+@media screen and (min-width: 956px) {
+  .logo-2 {
+    display: none;
+  }
+}
 @media screen and (min-width: 771px) and (max-width: 956px) {
   .navbar {
     height: 10%;
@@ -296,6 +294,9 @@ footer a:hover {
   }
   .cart {
     width: 100%;
+  }
+  .logo-2 {
+    display: none;
   }
 }
 @media (max-width: 771px) {

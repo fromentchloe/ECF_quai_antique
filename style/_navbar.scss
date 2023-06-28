@@ -1,8 +1,7 @@
-/* Définir la couleur de fond de la barre de navigation */
+
 .navbar {
   background-color: $brown;
   font-family: $text_headline;
-
   top: 0;
   left: 0;
   width: 100vw;
@@ -14,14 +13,11 @@
     opacity: 0;
   }
 
-  /* Définir le style du logo */
   .logo {
-      box-shadow: 10px 20px 50px black; 
+      box-shadow: 10px 20px 50px rgb(255, 255, 255); 
   }
   
-  /* Définir le style de la barre de navigation */
   .navbar-collapse {
-    /* Définir la disposition de la barre de navigation */
     display: flex;
     justify-content: space-between;
   }
@@ -41,11 +37,9 @@
      
      .dropdown-item:hover {
       color: $brown;
-      background-color: $nude;
     }
   }
   
-  /* Définir le style des liens de contact */
   .contact-link {
     @include btn-style;
   }
