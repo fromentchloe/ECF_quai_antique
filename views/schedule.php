@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <?php if (!isset($_SESSION['user_is_admin']) || $_SESSION['user_is_admin'] !== '1') { ?>
       <div class="col-md-6">
-        <iframe class="left-to-right cart" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.7954935349853!2d5.9129499999999995!3d45.57455099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba85be9f4b0c1%3A0x995a84690c36dd5f!2s552%20Rue%20Nicolas%20Parent%2C%2073000%20Chamb%C3%A9ry!5e0!3m2!1sfr!2sfr!4v1687957830109!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="left-to-right cart" width="100%" height="70%"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.7954935349853!2d5.9129499999999995!3d45.57455099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba85be9f4b0c1%3A0x995a84690c36dd5f!2s552%20Rue%20Nicolas%20Parent%2C%2073000%20Chamb%C3%A9ry!5e0!3m2!1sfr!2sfr!4v1687957830109!5m2!1sfr!2sfr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <p style="font-size: x-large ;"><br><i class="bi bi-geo"></i> 552 rue Nicolas Parent, 73000 Chambéry</p>
         </div>
       <div class="right-to-left col-md-6">

@@ -2,27 +2,23 @@
 .navbar {
   background-color: $brown;
   font-family: $text_headline;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 20%;
   opacity: 1;
+  width:100vw;
   transition: opacity 0.5s ease-in-out;
   }
   .navbar.hidden {
     opacity: 0;
   }
 
-  .logo {
-      box-shadow: 10px 20px 50px rgb(255, 255, 255); 
-  }
-  
+  .logo, .logo-2 {
+     background-color: $nude;
+     border-radius: 30%;
+    }
+ 
   .navbar-collapse {
     display: flex;
     justify-content: space-between;
   }
-
-  /* Définir le style des liens de navigation */
   .nav-link {
     color: $nude;
     margin: 0.5em;
@@ -31,10 +27,10 @@
       color: $mid-nude;
     }  
   }
+
   .dropdown-menu {
      background-color: $nude;
      text-align: center;
-     
      .dropdown-item:hover {
       color: $brown;
     }

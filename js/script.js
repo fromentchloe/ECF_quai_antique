@@ -83,7 +83,7 @@ $(document).ready(function() {
   function isVisible(element) {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    const threshold = windowHeight - 70;
+    const threshold = windowHeight - 90;
   
     return rect.top <= threshold;
   }
@@ -140,6 +140,7 @@ function confirmDelete() {
 
 
 });
+
 
 });
 

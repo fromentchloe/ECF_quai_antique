@@ -1,3 +1,7 @@
+.about {
+    width: 100vw;
+}
+
 .about_title {
     @include title;
 }
@@ -10,5 +14,5 @@ p {
     color: transparent;
     font-family: $text_headline;
     font-size: 2em;
-    margin-top: 10%;
+    margin-top: 15%;
 }

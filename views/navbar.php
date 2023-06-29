@@ -1,15 +1,14 @@
-<?php    
-?>
-<nav id="navbar" class="navbar transparent-background navbar-expand-md fixed-top">
-    <div class="container-fluid">
+<div class="container">
+<nav id="navbar" class="navbar transparent-background navbar-expand-sm fixed-top">
+
       <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" > </span>
       </button>
-      <img class="logo-2" src="./image/text+logo.png" width="50" alt="Logo de l'entreprise">
+      <a href="../index.php"><img class="logo-2" src="./image/text+logo.png" width="50" alt="Logo de l'entreprise">
         </a>
     <div class="navbar-collapse collapse" id="navbarNav">
         <a class="navbar-brand navbar-brand-title" href="index.php">
-          <img class="logo" src="./image/text+logo.png" width="100" alt="Logo de l'entreprise">
+          <img class="logo p-2" src="./image/text+logo.png" width="70" alt="Logo de l'entreprise">
         </a>
 <ul class="navbar-nav justify-content-center">
     <li class="nav-item ">
@@ -64,6 +63,5 @@
 
 </div>
     
-  </div>
-  </div>
+
 </nav>
